@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 8080;
+
+// ✅ Use Railway or hosting environment's port, fallback to 8080 for local dev
+const PORT = process.env.PORT || 8080;
 
 // Middleware to serve static files
 app.use('/styles', express.static(path.join(__dirname, 'public/styles')));
