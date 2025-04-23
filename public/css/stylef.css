@@ -62,7 +62,7 @@ body {
   
   /* Hero Section */
   .hero {
-    background: url('/images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('/images/crazy13.png') no-repeat center center/cover;
     color: white;
     height: 100vh;
     display: flex;
@@ -233,6 +233,135 @@ body {
     }
     .about {
       flex-direction: column;
+    }
+  }
+  
+  /* Showcase Section */
+  .showcase-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .showcase-slider {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    animation: slideShowcase 30s linear infinite;
+  }
+  
+  .showcase-slider img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .showcase-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .showcase-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .showcase-content p {
+    font-size: 1.4rem;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .btn-showcase {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-showcase:hover {
+    background-color: #ffd700;
+    color: #000;
+  }
+  
+  /* MEN Hero Section */
+  .men-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .men-slider-wrapper {
+    display: flex;
+    animation: scrollMen 30s linear infinite;
+    height: 100%;
+  }
+  
+  .men-slide {
+    flex: 0 0 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Men Slide Background Images */
+  .men-slide:nth-child(1) {
+    background-image: url('/images/men1.png');
+  }
+  .men-slide:nth-child(2) {
+    background-image: url('/images/men2.png');
+  }
+  .men-slide:nth-child(3) {
+    background-image: url('/images/men3.png');
+  }
+  
+  .men-slide .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .men-slide h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Animations */
+  @keyframes scrollMen {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
+  
+  @keyframes slideShowcase {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
     }
   }
   
