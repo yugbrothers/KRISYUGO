@@ -48,7 +48,7 @@ app.use((req, res) => {
   res.status(404).send('404 - Page Not Found');
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`KRISYUG server is running at http://localhost:${PORT}`);
+// Start the server
+app.listen(8080, () => {
+  console.log('Server running on http://localhost:8080');
 });
