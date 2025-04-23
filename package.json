@@ -1,0 +1,16 @@
+{
+  "name": "krisyugo",
+  "version": "1.0.0",
+  "description": "E-commerce platform for KRISYUG",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "keywords": []
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KRISYUG - Timeless Ethnic Fashion</title>
+
+  <!-- External Styles -->
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Cinzel+Decorative:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Inline Styles -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 2.5em;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background: url('/images/yug1.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    .btn-primary {
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">KRISYUG</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="/signin.html">Sign In</a>
+      <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Timeless Ethnic Wear</h1>
+      <p>Experience elegance with every thread</p>
+      <a href="#collections" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="/js/script.js"></script>
+</body>
+</html>

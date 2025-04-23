@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - KRISYUG</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">KRISYUG</div>
+      <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/mens.html">Men</a>
+        <a href="/women.html">Women</a>
+        <a href="/kids.html">Kids</a>
+        <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </nav>
+    </div>
+  </header>
+  <section class="checkout-section">
+    <div class="container">
+      <h2>Review Your Selection</h2>
+      <div class="product-preview" id="productPreview"></div>
+      <label for="size">Choose Size:</label>
+      <select id="size">
+        <option value="S">Small</option>
+        <option value="M">Medium</option>
+        <option value="L">Large</option>
+        <option value="XL">Extra Large</option>
+      </select>
+      <a href="signin.html" class="btn-primary" id="continueBtn">Continue</a>
+    </div>
+  </section>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+    const price = urlParams.get('price');
+    const image = urlParams.get('image');
+    const productPreview = document.getElementById('productPreview');
+
+    productPreview.innerHTML = `
+      <img src="${image}" alt="${product}" style="max-width: 200px;">
+      <h3>${product}</h3>
+      <p>Price: ₹${price}</p>
+    `;
+
+    document.getElementById('continueBtn').addEventListener('click', () => {
+      const size = document.getElementById('size').value;
+      localStorage.setItem('productDetails', JSON.stringify({ product, price, image, size }));
+    });
+  </script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

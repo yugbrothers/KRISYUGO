@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KRISYUG - Timeless Ethnic Fashion</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Dancing+Script&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5em;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background: url('/images/yug1.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    .hero-content h1,
+    .hero-content p {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .hero-content h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+
+    .btn-primary {
+      font-family: 'Cormorant Garamond', serif;
+      background-color: transparent;
+      color: #fff;
+      padding: 12px 28px;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* MEN SECTION STYLES */
+    .men-section {
+      background-color: #f8f8f8;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .men-heading h2 {
+      font-size: 2.5em;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 10px;
+    }
+
+    .men-heading p {
+      font-size: 1.2em;
+      color: #666;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .men-slider {
+      display: flex;
+      flex-direction: row-reverse; /* right to left */
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .men-item {
+      flex: 0 0 auto;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .men-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .men-item:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">KRISYUG</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#men">Men</a>
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="/signin.html">Sign In</a>
+      <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Timeless Ethnic Wear</h1>
+      <p>Experience elegance with every thread</p>
+      <a href="#men" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="showcase-section">
+    <div class="showcase-slider">
+      <img src="/images/yug1.png" alt="Style 1" />
+      <img src="/images/yug2.png" alt="Style 2" />
+      <img src="/images/yug3.png" alt="Style 3" />
+    </div>
+    <div class="showcase-content">
+      <h2>Discover Royal Styles</h2>
+      <p>Grace in every silhouette</p>
+      <a href="#collections" class="btn-showcase">Shop Now</a>
+    </div>
+  </section>
+  <section id="men" class="men-hero">
+    <div class="men-slider-wrapper">
+      <div class="men-slide" style="background-image: url('/images/bro1.png');">
+        <div class="overlay">
+          <h2>Regal Menswear</h2>
+          <a href="/men.html" class="btn-primary">Explore</a>
+        </div>
+      </div>
+      <div class="men-slide" style="background-image: url('/images/boss3.png');">
+        <div class="overlay">
+          <h2>Elegant Looks</h2>
+          <a href="/men.html" class="btn-primary">View</a>
+        </div>
+      </div>
+      <div class="men-slide" style="background-image: url('/images/boss1.png');">
+        <div class="overlay">
+          <h2>Traditional Touch</h2>
+          <a href="/men.html" class="btn-primary">See More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Men Section -->
+  <section id="mental" class="men-section">
+    <div class="men-heading">
+      <h2>Men's Ethnic Collection</h2>
+      <p>Crafted with elegance and tradition</p>
+    </div>
+    <div class="men-slider">
+      <a href="/men.html" class="men-item">
+        <img src="/images/bro1.png" alt="Men's Look 1" />
+      </a>
+      <a href="/men.html" class="men-item">
+        <img src="/images/boss3.png" alt="Men's Look 2" />
+      </a>
+      <a href="/men.html" class="men-item">
+        <img src="/images/boss1.png" alt="Men's Look 3" />
+      </a>
+    </div>
+  </section>
+  <!-- New Showcase Section -->
+<section class="showcase-section">
+    <div class="showcase-content">
+      <h2>Discover Royal Styles</h2>
+      <p>Grace in every silhouette</p>
+      <a href="#collections" class="btn-showcase">Shop Now</a>
+    </div>
+    <div class="showcase-slider">
+      <img src="/images/yug1.png" alt="Style 1" />
+      <img src="/images/yug2.png" alt="Style 2" />
+      <img src="/images/yug3.png" alt="Style 3" />
+    </div>
+  </section>
+  
+  
+  <!-- NEW Hero Gallery Section (Horizontal scroll, right to left) -->
+  <section class="hero-gallery">
+    <div class="hero-gallery-wrapper">
+      <div class="hero-slide" style="background-image: url('/images/crazy13.png');">
+        <div class="overlay">
+          <h1>Refined Royal Looks</h1>
+          <a href="/men.html" class="btn-primary">Explore</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image: url('/images/sara1.png');">
+        <div class="overlay">
+          <h1>Heritage Reimagined</h1>
+          <a href="/women.html" class="btn-primary">Discover</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image: url('/images/sara2.png');">
+        <div class="overlay">
+          <h1>Tradition Meets Style</h1>
+          <a href="/collections.html" class="btn-primary">Browse</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Scripts -->
+  <script src="/js/script.js"></script>
+</body>
+</html>
