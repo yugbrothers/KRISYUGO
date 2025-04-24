@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KRISYUG - Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    .info p {
+      margin: 8px 0;
+    }
+
+    .btn-primary {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      background: black;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #333;
+    }
+
+    #success-message {
+      text-align: center;
+      padding: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="pay-section">
+    <h2>Order Summary</h2>
+    <img id="order-image" src="">
+    <div class="info">
+      <p><strong>Product:</strong> <span id="order-name"></span></p>
+      <p><strong>Price:</strong> ₹<span id="order-price"></span></p>
+      <p><strong>Name:</strong> <span id="customer-name"></span></p>
+      <p><strong>Email:</strong> <span id="customer-email"></span></p>
+      <p><strong>Phone:</strong> <span id="customer-phone"></span></p>
+    </div>
+
+    <button class="btn-primary" id="place-order">Place Order</button>
+  </div>
+
+  <div class="container" id="success-message" style="display: none;">
+    <h2>🎉 Order Placed Successfully!</h2>
+    <p>Thank you for shopping with KRISYUG.</p>
+  </div>
+
+  <script>
+    const order = JSON.parse(localStorage.getItem('productData'));
+    if (!order) {
+      window.location.href = '/';
+    } else {
+      document.getElementById('order-image').src = order.image;
+      document.getElementById('order-name').innerText = order.name;
+      document.getElementById('order-price').innerText = order.price;
+      document.getElementById('customer-name').innerText = `${order.firstName} ${order.lastName}`;
+      document.getElementById('customer-email').innerText = order.email;
+      document.getElementById('customer-phone').innerText = order.phone;
+    }
+
+    document.getElementById('place-order').addEventListener('click', () => {
+      document.getElementById('pay-section').style.display = 'none';
+      document.getElementById('success-message').style.display = 'block';
+      localStorage.removeItem('productData');
+    });
+  </script>
+</body>
+</html>

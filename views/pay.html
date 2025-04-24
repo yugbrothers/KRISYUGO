@@ -1,35 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRISYUG - Payment</title>
-    <link rel="stylesheet" href="/styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KRISYUG - Payment</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+      height: 100%;
+    }
+
+    .pay-hero {
+      background: url('/images/flora5.png') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      color: #fff;
+    }
+
+    .pay-box {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .pay-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+    }
+
+    .pay-box p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .btn-primary {
+      background: transparent;
+      color: #fff;
+      padding: 14px 28px;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn-primary:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .success-message {
+      font-size: 1.5rem;
+      color: #00ffae;
+      margin-top: 30px;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/mens.html">Men's Collection</a>
-            <a href="/women.html">Women's Collection</a>
-            <a href="/checkout.html">Cart</a>
-        </nav>
-    </header>
 
-    <section>
-        <h1>Order Review</h1>
-        <div id="order-details">
-            <h2>Product: <span id="order-name"></span></h2>
-            <p>Price: ₹<span id="order-price"></span></p>
-            <img id="order-image" src="" alt="Product Image">
-            <h3>Customer Details</h3>
-            <p>Name: <span id="customer-name"></span></p>
-            <p>Email: <span id="customer-email"></span></p>
-            <p>Phone: <span id="customer-phone"></span></p>
-        </div>
-        <button id="place-order">Place Order</button>
-    </section>
+  <section class="pay-hero" id="pay-hero">
+    <div class="pay-box">
+      <h2 id="payProductName">Product Name</h2>
+      <p id="payProductPrice">Price: ₹0</p>
 
-    <script src="/js/script.js"></script>
+      <button class="btn-primary" onclick="placeOrder('cod')">Cash on Delivery</button>
+      <button class="btn-primary" onclick="placeOrder('pay')">Pay Now</button>
+
+      <p class="success-message" id="successMsg">🎉 Order Placed Successfully!</p>
+    </div>
+  </section>
+
+  <script>
+    const name = localStorage.getItem("productName");
+    const price = localStorage.getItem("productPrice");
+
+    document.getElementById("payProductName").innerText = name || "Product Name";
+    document.getElementById("payProductPrice").innerText = price ? `Price: ₹${price}` : "Price: ₹0";
+
+    function placeOrder(type) {
+      // You can handle different order flows here
+      document.getElementById("successMsg").style.display = "block";
+
+      // Optionally clear storage
+      // localStorage.clear();
+    }
+  </script>
+
 </body>
 </html>

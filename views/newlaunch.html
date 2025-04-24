@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Launches - KRISYUG</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+  <style>
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #000;
+      padding: 20px 40px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2em;
+    }
+
+    .new-launches-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .new-launches-heading h2 {
+      font-size: 2.5em;
+      font-family: 'Cormorant Garamond', serif;
+      color: #b8860b;
+      margin-bottom: 10px;
+    }
+
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .btn-checkout {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: 2px solid #b8860b;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #b8860b;
+      font-family: 'Cormorant Garamond', serif;
+      transition: all 0.3s ease;
+    }
+
+    .btn-checkout:hover {
+      background-color: #b8860b;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">KRISYUG</div>
+    <nav>
+      <a href="/index.html" style="color:#fff; text-decoration:none;">Home</a>
+    </nav>
+  </header>
+
+  <section class="new-launches-section">
+    <div class="new-launches-heading">
+      <h2>All New Launches</h2>
+    </div>
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="/images/flora5.png" alt="Floral Lehenga">
+        <h3>Floral Lehenga</h3>
+        <p>₹1899</p>
+        <a class="btn-checkout" href="#" onclick="goToCheckout('Floral Lehenga', '1899', '/images/flora5.png')">Checkout</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="/images/flora2.png" alt="Royal Saree">
+        <h3>Royal Saree</h3>
+        <p>₹2499</p>
+        <a class="btn-checkout" href="#" onclick="goToCheckout('Royal Saree', '2499', '/images/flora2.png')">Checkout</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="/images/flora3.png" alt="Kanchipuram Silk">
+        <h3>Kanchipuram Silk</h3>
+        <p>₹2999</p>
+        <a class="btn-checkout" href="#" onclick="goToCheckout('Kanchipuram Silk', '2999', '/images/flora3.png')">Checkout</a>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="/images/flora4.png" alt="Elegant Dupatta Set">
+        <h3>Elegant Dupatta Set</h3>
+        <p>₹1599</p>
+        <a class="btn-checkout" href="#" onclick="goToCheckout('Elegant Dupatta Set', '1599', '/images/flora4.png')">Checkout</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Redirection Script -->
+  <script>
+    function goToCheckout(name, price, image) {
+      localStorage.setItem("productName", name);
+      localStorage.setItem("productPrice", price);
+      localStorage.setItem("productImage", image);
+      window.location.href = "/checkout.html";
+    }
+  </script>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -342,19 +342,22 @@
   <div class="new-launches-slider">
     <div class="launch-item">
       <img src="/images/flora5.png" alt="New Product 1" />
-      <a href="#men" class="btn-primary">Shop Now</a>
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
     </div>
     <div class="launch-item">
       <img src="/images/flora2.png" alt="New Product 2" />
-      <a href="#men" class="btn-primary">Shop Now</a>
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
     </div>
     <div class="launch-item">
       <img src="/images/flora3.png" alt="New Product 3" />
-      <a href="#men" class="btn-primary">Shop Now</a>
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
     </div>
     <div class="launch-item">
       <img src="/images/flora4.png" alt="New Product 4" />
-      <a href="#men" class="btn-primary">Shop Now</a>
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
     </div>
     <!-- Add more as needed -->
   </div>
@@ -384,7 +387,15 @@
     </div>
   </section>
 
-
+  <script>
+    function goToCheckout(name, price, image) {
+      localStorage.setItem("productName", name);
+      localStorage.setItem("productPrice", price);
+      localStorage.setItem("productImage", image);
+      window.location.href = "/checkout.html";
+    }
+  </script>
+  
   <!-- Scripts -->
   <script src="/js/script.js"></script>
 </body>

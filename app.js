@@ -31,6 +31,11 @@ app.get('/kids.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/kids.html'));
 });
 
+app.get('/newlaunch.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/newlaunch.html'));
+});
+
+
 app.get('/checkout.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/checkout.html'));
 });
@@ -52,4 +57,7 @@ app.use((req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
+
 

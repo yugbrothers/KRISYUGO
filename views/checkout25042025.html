@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KRISYUG - Checkout</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Dancing+Script&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="/styles/style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -33,6 +36,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5em;
       color: #fff;
+      letter-spacing: 1px;
     }
 
     .nav a {
@@ -40,6 +44,7 @@
       text-decoration: none;
       margin-left: 20px;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     .nav a:hover {
@@ -67,6 +72,7 @@
     .checkout-overlay h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
     .checkout-overlay p {
@@ -80,10 +86,12 @@
       color: #fff;
       padding: 12px 28px;
       margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
       border-radius: 30px;
       border: 2px solid #fff;
-      transition: 0.3s ease;
-      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
     .btn-primary:hover {
@@ -94,6 +102,7 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header class="header">
     <div class="logo">KRISYUG</div>
     <nav class="nav">
@@ -108,35 +117,46 @@
     </nav>
   </header>
 
-  <section class="checkout-hero" id="checkout-hero">
+  <!-- Checkout Hero Section with dynamic background -->
+<section class="checkout-hero" id="checkout-hero">
     <div class="checkout-overlay">
       <h1 id="productName">Product Name</h1>
       <p id="productPrice">Price: ₹0</p>
-      <button class="btn-primary" onclick="handleBuyNow()">Buy Now</button>
+      <a href="#" class="btn-primary" onclick="handleBuyNow()">Buy Now</a>
+
     </div>
   </section>
-
+  
   <script>
     const productImage = localStorage.getItem("productImage");
     const productName = localStorage.getItem("productName");
     const productPrice = localStorage.getItem("productPrice");
-
+  
     if (productImage) {
       document.getElementById("checkout-hero").style.backgroundImage = `url('${productImage}')`;
     }
-
+  
     document.getElementById("productName").innerText = productName || "Product Name";
     document.getElementById("productPrice").innerText = productPrice ? `Price: ₹${productPrice}` : "Price: ₹0";
-
-    function handleBuyNow() {
-      const user = JSON.parse(localStorage.getItem("user"));
-      if (user && user.email) {
-        window.location.href = "/pay.html";
-      } else {
-        window.location.href = "/signin.html";
-      }
-    }
   </script>
+  <script>
+    function handleBuyNow() {
+    const user = JSON.parse(localStorage.getItem("user"));
+  
+    if (user && user.email) {
+      // User is logged in, go to pay page
+      window.location.href = "/pay.html";
+    } else {
+      // Not logged in, go to sign-in page
+      window.location.href = "/signin.html";
+    }
+  }
+  </script>
+  
+  
+  
+  <script src="/js/script.js"></script>
+  
 
 </body>
 </html>
