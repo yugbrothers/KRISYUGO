@@ -60,6 +60,11 @@
       text-align: center;
       position: relative;
     }
+    .hero {
+  background: url('/images/tradoboy1.png') no-repeat center center/cover;
+  transition: background-image 1s ease-in-out;
+    }
+
 
     .hero-content {
       background: rgba(0, 0, 0, 0.5);
@@ -309,6 +314,21 @@
     <a href="#men" class="btn-primary">Shop Now</a>
   </div>
 </section>
+  <!-- ✅ JS SLIDER SCRIPT -->
+<script>
+  const images = [
+    "/images/tradoboy1.png",
+    "/images/flora5.png",
+    "/images/flora3.png"
+  ];
+  let current = 0;
+  const slider = document.querySelector('.hero');
+
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    slider.style.backgroundImage = `url(${images[current]})`;
+  }, 2000);
+</script>
 
 
 

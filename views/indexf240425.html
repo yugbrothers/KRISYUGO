@@ -149,6 +149,139 @@
     .men-item:hover {
       transform: scale(1.05);
     }
+    .men-hero {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.men-slider-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.men-slide {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.men-slide:nth-child(1) {
+  background-image: url('/images/tradoboy1.png'); /* Replace with your images */
+}
+.men-slide:nth-child(2) {
+  background-image: url('/images/tradoboy2.png');
+}
+.men-slide:nth-child(3) {
+  background-image: url('/images/crazy13.png');
+}
+
+.men-slide:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.btn-showcase {
+  font-family: 'Cormorant Garamond', serif;
+  display: inline-block;
+  padding: 10px 24px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-showcase:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+    /* New Launches Section */
+.new-launches-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.new-launches-heading h2 {
+  font-size: 2.5em;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
+  color: #b8860b;
+}
+
+.new-launches-heading p {
+  font-size: 1.2em;
+  color: #666;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 40px;
+}
+
+.new-launches-slider {
+  display: flex;
+  flex-direction: row-reverse; /* Slide right to left */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+}
+
+.launch-item {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.launch-item:hover {
+  transform: scale(1.05);
+}
+
+.launch-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.launch-item .btn-primary {
+  margin: 15px auto 20px;
+  display: inline-block;
+  border-color: #b8860b;
+}
+
   </style>
 </head>
 <body>
@@ -169,108 +302,68 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Timeless Ethnic Wear</h1>
-      <p>Experience elegance with every thread</p>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Timeless Ethnic Wear</h1>
+    <p>Experience elegance with every thread</p>
+    <a href="#men" class="btn-primary">Shop Now</a>
+  </div>
+</section>
+
+
+
+  <!-- New Launches Section -->
+<section class="new-launches-section">
+  <div class="new-launches-heading">
+    <h2>New Launches</h2>
+    <p>Explore our latest ethnic wear crafted for elegance and grace.</p>
+  </div>
+
+  <div class="new-launches-slider">
+    <div class="launch-item">
+      <img src="/images/flora5.png" alt="New Product 1" />
       <a href="#men" class="btn-primary">Shop Now</a>
     </div>
-  </section>
+    <div class="launch-item">
+      <img src="/images/flora2.png" alt="New Product 2" />
+      <a href="#men" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora3.png" alt="New Product 3" />
+      <a href="#men" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora4.png" alt="New Product 4" />
+      <a href="#men" class="btn-primary">Shop Now</a>
+    </div>
+    <!-- Add more as needed -->
+  </div>
+</section>
 
-  <section class="showcase-section">
-    <div class="showcase-slider">
-      <img src="/images/yug1.png" alt="Style 1" />
-      <img src="/images/yug2.png" alt="Style 2" />
-      <img src="/images/yug3.png" alt="Style 3" />
-    </div>
-    <div class="showcase-content">
-      <h2>Discover Royal Styles</h2>
-      <p>Grace in every silhouette</p>
-      <a href="#collections" class="btn-showcase">Shop Now</a>
-    </div>
-  </section>
-  <section id="men" class="men-hero">
+   <!-- Men Section -->
+   <section id="men" class="men-hero">
     <div class="men-slider-wrapper">
-      <div class="men-slide" style="background-image: url('/images/bro1.png');">
+      <div class="men-slide">
         <div class="overlay">
-          <h2>Regal Menswear</h2>
-          <a href="/men.html" class="btn-primary">Explore</a>
+          <h2>Classic Sherwanis</h2>
+          <a href="/mens.html" class="btn-showcase">Shop Now</a>
         </div>
       </div>
-      <div class="men-slide" style="background-image: url('/images/boss3.png');">
+      <div class="men-slide">
         <div class="overlay">
-          <h2>Elegant Looks</h2>
-          <a href="/men.html" class="btn-primary">View</a>
+          <h2>Modern Kurta Sets</h2>
+          <a href="/mens.html" class="btn-showcase">Shop Now</a>
         </div>
       </div>
-      <div class="men-slide" style="background-image: url('/images/boss1.png');">
+      <div class="men-slide">
         <div class="overlay">
-          <h2>Traditional Touch</h2>
-          <a href="/men.html" class="btn-primary">See More</a>
+          <h2>Festive Fashion</h2>
+          <a href="/mens.html" class="btn-showcase">Shop Now</a>
         </div>
       </div>
     </div>
   </section>
-  
-  
 
-  <!-- Men Section -->
-  <section id="mental" class="men-section">
-    <div class="men-heading">
-      <h2>Men's Ethnic Collection</h2>
-      <p>Crafted with elegance and tradition</p>
-    </div>
-    <div class="men-slider">
-      <a href="/men.html" class="men-item">
-        <img src="/images/bro1.png" alt="Men's Look 1" />
-      </a>
-      <a href="/men.html" class="men-item">
-        <img src="/images/boss3.png" alt="Men's Look 2" />
-      </a>
-      <a href="/men.html" class="men-item">
-        <img src="/images/boss1.png" alt="Men's Look 3" />
-      </a>
-    </div>
-  </section>
-  <!-- New Showcase Section -->
-<section class="showcase-section">
-    <div class="showcase-content">
-      <h2>Discover Royal Styles</h2>
-      <p>Grace in every silhouette</p>
-      <a href="#collections" class="btn-showcase">Shop Now</a>
-    </div>
-    <div class="showcase-slider">
-      <img src="/images/yug1.png" alt="Style 1" />
-      <img src="/images/yug2.png" alt="Style 2" />
-      <img src="/images/yug3.png" alt="Style 3" />
-    </div>
-  </section>
-  
-  
-  <!-- NEW Hero Gallery Section (Horizontal scroll, right to left) -->
-  <section class="hero-gallery">
-    <div class="hero-gallery-wrapper">
-      <div class="hero-slide" style="background-image: url('/images/crazy13.png');">
-        <div class="overlay">
-          <h1>Refined Royal Looks</h1>
-          <a href="/men.html" class="btn-primary">Explore</a>
-        </div>
-      </div>
-      <div class="hero-slide" style="background-image: url('/images/sara1.png');">
-        <div class="overlay">
-          <h1>Heritage Reimagined</h1>
-          <a href="/women.html" class="btn-primary">Discover</a>
-        </div>
-      </div>
-      <div class="hero-slide" style="background-image: url('/images/sara2.png');">
-        <div class="overlay">
-          <h1>Tradition Meets Style</h1>
-          <a href="/collections.html" class="btn-primary">Browse</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
 
   <!-- Scripts -->
   <script src="/js/script.js"></script>
