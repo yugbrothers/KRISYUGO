@@ -35,6 +35,14 @@ app.get('/newlaunch.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/newlaunch.html'));
 });
 
+app.get('/people.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/people.html'));
+})
+
+app.get('/careers.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/careers.html'));
+})
+
 
 app.get('/checkout.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/checkout.html'));

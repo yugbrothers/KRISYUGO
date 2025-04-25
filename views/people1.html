@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KRISYUG Careers - Our People</title>
+  <link rel="stylesheet" href="/styles/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+      color: #fff;
+    }
+
+    .background {
+      background: url('/images/flora5.png') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+    }
+
+    .overlay-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 15px;
+      width: 90%;
+      max-width: 1000px;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: #ffd700;
+    }
+
+    .person {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+    }
+
+    .person a {
+      color: #add8e6;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .person a:hover {
+      text-decoration: underline;
+    }
+
+    #financialChart {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background">
+    <div class="overlay-content">
+      <h2>KRISYUG Team & Careers</h2>
+
+      <!-- Enrolled People -->
+      <h3>Enrolled Members</h3>
+      <div class="person">
+        <strong>Riya Sharma</strong> - Fashion Designer
+        <a href="https://www.instagram.com/riyasharma" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/riyasharma" target="_blank">LinkedIn</a>
+        <p><em>Assigned Task:</em> Design festive lehenga collection.</p>
+      </div>
+
+      <div class="person">
+        <strong>Arjun Verma</strong> - Marketing Head
+        <a href="https://www.instagram.com/arjunverma" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/arjunverma" target="_blank">LinkedIn</a>
+        <p><em>Assigned Task:</em> Lead campaign for New Launches.</p>
+      </div>
+
+      <!-- Enrollment Section -->
+      <h3>Want to Join?</h3>
+      <p>Email your resume to: <strong>careers@krisyug.com</strong></p>
+
+      <!-- Financial Overview -->
+      <h3>Financial Contributions</h3>
+      <canvas id="financialChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('financialChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Investor A - ₹5L', 'Investor B - ₹3L', 'Investor C - ₹2L'],
+        datasets: [{
+          label: 'Investment',
+          data: [500000, 300000, 200000],
+          backgroundColor: ['#FFD700', '#C0C0C0', '#CD7F32']
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              color: '#000'
+            }
+          }
+        }
+      }
+    });
+  </script>
+  <script src="/js/script.js"></script>
+
+</body>
+</html>
