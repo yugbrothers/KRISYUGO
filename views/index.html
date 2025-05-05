@@ -510,12 +510,13 @@ body {
 }
 
 .tshirt-container {
-  padding: 40px;
-  max-width: 1400px;
-  margin: auto;
-  border-radius: 20px;
+  background: url('images/curated1.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
   position: relative;
-  z-index: 1;
+  height: 100vh;
 }
 
 .tshirt-container::before {
@@ -523,6 +524,8 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.3);
+
   z-index: -1;
   border-radius: 20px;
 }
@@ -593,17 +596,22 @@ body {
   background-color: #d9a620;
 }
 
-body {
-  background: url('images/curated1.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-}
+
 
 /* Mobile fix */
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
     background-position: center top;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    min-height: 100vh;
   }
 }
 
