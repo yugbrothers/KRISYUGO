@@ -51,15 +51,19 @@
     }
 
     .hero {
-      background: url('/images/yug1.png') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      position: relative;
-    }
+  background: url('/images/brother1.png') no-repeat center center;
+  background-size: contain; /* ensures full image is visible */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000; /* fallback background */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
     .hero {
   background: url('/images/brother1.png') no-repeat center center/cover;
   transition: background-image 1s ease-in-out;
@@ -443,6 +447,19 @@ body {
     </nav>
   </header>
 
+  <!-- Hero Section 
+  <section id="home" class="hero-img-section">
+    <img id="heroImage" src="/images/brother1.png" alt="Hero" class="hero-img" />
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Timeless Ethnic Wear</h1>
+        <p>Experience elegance with every thread</p>
+        <a href="#men" class="btn-primary">Shop Now</a>
+      </div>
+    </div>
+  </section>
+  -->
+  
   <!-- Hero Section -->
 <section id="home" class="hero">
   <div class="hero-content">
@@ -451,6 +468,7 @@ body {
     <a href="#men" class="btn-primary">Shop Now</a>
   </div>
 </section>
+
   <!-- ✅ JS SLIDER SCRIPT -->
 <script>
   const images = [
