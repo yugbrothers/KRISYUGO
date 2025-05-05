@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Tracker - KRISYUG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('images/twam1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      text-align: center;
+      color: #b8860b;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    .info h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .info label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Product Work Tracker</h1>
+    <div class="grid">
+      <!-- Begin product work card -->
+      <div class="product">
+        <img src="images/design1.jpg" alt="Design Image">
+        <div class="info">
+          <h3>Urban Designer Shirt</h3>
+          <p><label>Design Reference:</label> <img src="images/ref1.jpg" style="width:100px;"></p>
+          <p><label>Materials Required:</label> Cotton, Polyester, Thread</p>
+          <p><label>Materials in Stock:</label> Cotton, Thread</p>
+          <p><label>Printing Location:</label> Delhi Unit 2</p>
+          <p><label>Responsible Team:</label> Fabrication</p>
+          <p><label>Team Lead:</label> Rajiv Mehra</p>
+          <p><label>Status:</label> In Progress</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/design2.jpg" alt="Design Image">
+        <div class="info">
+          <h3>Festive Kurta Set</h3>
+          <p><label>Design Reference:</label> <img src="images/ref2.jpg" style="width:100px;"></p>
+          <p><label>Materials Required:</label> Silk, Embroidery Thread</p>
+          <p><label>Materials in Stock:</label> Silk</p>
+          <p><label>Printing Location:</label> Surat HQ</p>
+          <p><label>Responsible Team:</label> Embroidery</p>
+          <p><label>Team Lead:</label> Anjali Rao</p>
+          <p><label>Status:</label> Waiting for Thread</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/design3.jpg" alt="Design Image">
+        <div class="info">
+          <h3>Summer Cotton Dress</h3>
+          <p><label>Design Reference:</label> <img src="images/ref3.jpg" style="width:100px;"></p>
+          <p><label>Materials Required:</label> Cotton, Dye</p>
+          <p><label>Materials in Stock:</label> Cotton, Dye</p>
+          <p><label>Printing Location:</label> Jaipur Unit 4</p>
+          <p><label>Responsible Team:</label> Tailoring</p>
+          <p><label>Team Lead:</label> Pooja Khandelwal</p>
+          <p><label>Status:</label> Ready for Stitching</p>
+        </div>
+      </div>
+
+      <!-- Repeat or add more work cards below as needed -->
+    </div>
+  </div>
+</body>
+</html>

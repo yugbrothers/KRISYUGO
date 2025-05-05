@@ -1,0 +1,114 @@
+<!-- T-Shirt Section -->
+<section id="tshirt" class="hero tshirt-section">
+    <div class="hero-content">
+      <h1>Classic T-Shirts</h1>
+      <p>Comfort meets style in every thread</p>
+      <a href="#tshirts" class="btn-primary">Explore T-Shirts</a>
+    </div>
+    <div class="media-preview" id="mediaPreview"></div>
+  </section>
+  
+  <style>
+    .tshirt-section {
+      position: relative;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+  
+    .media-preview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+  
+    .media-preview video,
+    .media-preview img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 1s ease-in-out;
+      transform: translateX(100%);
+    }
+  
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+    }
+  
+    .btn-primary {
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+  
+  <script>
+    const mediaList = [
+      { type: 'image', src: '/images/sourav1.png' },
+      { type: 'video', src: '/videos/tshirt1.mp4' },
+      { type: 'video', src: '/videos/tshirt2.mp4' },
+      { type: 'image', src: '/images/sourav1.png' }
+    ];
+  
+    let index = 0;
+    const mediaPreview = document.getElementById('mediaPreview');
+  
+    function showMedia() {
+      mediaPreview.innerHTML = '';
+  
+      const media = mediaList[index];
+      let element;
+  
+      if (media.type === 'video') {
+        element = document.createElement('video');
+        element.src = media.src;
+        element.autoplay = true;
+        element.muted = true;
+        element.playsInline = true;
+        element.loop = false;
+  
+        element.onloadeddata = () => {
+          animateMedia(element);
+        };
+      } else if (media.type === 'image') {
+        element = document.createElement('img');
+        element.src = media.src;
+  
+        element.onload = () => {
+          animateMedia(element);
+        };
+      }
+  
+      element.onerror = () => console.error('Media failed to load:', media.src);
+  
+      mediaPreview.appendChild(element);
+    }
+  
+    function animateMedia(element) {
+      requestAnimationFrame(() => {
+        element.style.transform = 'translateX(0%)';
+      });
+  
+      setTimeout(() => {
+        element.style.transform = 'translateX(-100%)';
+        index = (index + 1) % mediaList.length;
+        setTimeout(showMedia, 1000); // 1s transition
+      }, 5000); // Show for 5 seconds
+    }
+  
+    showMedia();
+  </script>
+  

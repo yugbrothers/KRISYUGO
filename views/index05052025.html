@@ -232,23 +232,18 @@
 
 
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: url('images/curated1.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-}
+
+
+
+
+    /* New Launches Section */
+    
 
 
 .new-launches-section {
-  background: url('images/launch-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #fff;
   padding: 80px 20px;
   text-align: center;
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
 }
 
 .new-launches-heading h2 {
@@ -260,66 +255,71 @@ body {
 
 .new-launches-heading p {
   font-size: 1.2em;
-  color: #ddd;
+  color: #666;
   font-family: 'Josefin Sans', sans-serif;
   margin-bottom: 40px;
 }
 
 .new-launches-slider {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse; 
   overflow-x: auto;
-  overflow-y: hidden;
   scroll-behavior: smooth;
-  gap: 30px;
+  gap: 20px;
   padding: 20px;
-  max-width: 100%;
 }
 
 .launch-item {
-  background-color: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  width: 100%;
-  max-width: 300px;
   flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .launch-item:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
 }
 
 .launch-item img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  display: block;
 }
 
-.btn-primary {
-  margin-top: 15px;
+.launch-item .btn-primary {
+  margin: 15px auto 20px;
   display: inline-block;
-  border: 2px solid #b8860b;
-  background: transparent;
-  color: #b8860b;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-weight: bold;
-  font-family: 'Josefin Sans', sans-serif;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
+  border-color: #b8860b;
+}
+.new-launches-section {
+  position: relative;
+  background-image: url('/images/curated1.png'); /* You can replace with another background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 80px 20px;
+  text-align: center;
+  z-index: 0;
 }
 
-.btn-primary:hover {
-  background: #b8860b;
-  color: #fff;
+.new-launches-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
 }
+
+.new-launches-section > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 
 
@@ -497,8 +497,6 @@ body {
 }
 
 
-
-
 /* TSHIRT section*/
 
 body {
@@ -647,38 +645,7 @@ body {
 </script>
 
 
-  <!-- Curated Collection Section -->
-  <section class="curated-section">
-    <div class="curated-heading">
-      <h2>Curated Collection</h2>
-      <p>Handpicked styles just for you</p>
-    </div>
-  
-    <div class="curated-grid">
-      <div class="curated-card">
-        <img src="/images/flora12.png" alt="Curated Look 1">
-        <div class="card-info">
-          <h3>Elegant Kurti</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-      <div class="curated-card">
-        <img src="/images/tanmay1.png" alt="Curated Look 2">
-        <div class="card-info">
-          <h3>Bold Festive Wear</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-      <div class="curated-card">
-        <img src="/images/curated1.png" alt="Curated Look 3">
-        <div class="card-info">
-          <h3>Modern Saree</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+
   <!-- New Launches Section -->
 <section class="new-launches-section">
   <div class="new-launches-heading">
@@ -709,26 +676,6 @@ body {
     <!-- Add more as needed -->
   </div>
 </section>
-
-
-<div class="new-launches-section">
-    <div class="new-launches-heading">
-      <h2>New Product Launches</h2>
-      <p>Discover the latest arrivals handpicked for you</p>
-    </div>
-    <div class="new-launches-slider">
-      <div class="launch-item">
-        <img src="images/product1.jpg" alt="New Product 1" />
-        <button class="btn-primary">View Product</button>
-      </div>
-      <div class="launch-item">
-        <img src="images/product2.jpg" alt="New Product 2" />
-        <button class="btn-primary">View Product</button>
-      </div>
-      <!-- Add more items as needed -->
-    </div>
-  </div>
-  
 
 <section class="new-launches-section">
   <h2 class="section-title">Best Sellers</h2>
@@ -863,49 +810,176 @@ body {
 
    
 
- 
+  <!-- tshirt Section -->
+
+  <section class="tshirt-section" id="tshirtSection">
+    <div class="media-preview" id="mediaPreview"></div>
+    <div class="tshirt-content">
+      <h1>Explore Timeless Tees</h1>
+      <p>Premium ethnic wear redefined for everyday comfort.</p>
+      <a href="/mens.html" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- T-Shirts Showcase Section with Full-Screen Background -->
+<section class="tshirt-showcase-hero">
+    <div class="tshirt-overlay">
+      <div class="tshirt-content">
+        <h2 class="section-title">Timeless T-Shirts</h2>
+        <p class="section-subtitle">Elegant. Everyday. Ethnic.</p>
+        <div class="tshirt-grid">
+          <div class="tshirt-card">
+            <img src="/images/sourav1.png" alt="T-shirt 1">
+            <h3>Classic Beige Kurta</h3>
+            <p>₹1499</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+          <div class="tshirt-card">
+            <img src="/images/sourav2.png" alt="T-shirt 2">
+            <h3>Royal Blue Short Kurta</h3>
+            <p>₹1699</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+          <div class="tshirt-card">
+            <img src="/images/sourav3.png" alt="T-shirt 3">
+            <h3>Festive White T-Shirt</h3>
+            <p>₹1399</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
 
- 
+  <!-- T-Shirts Showcase Section -->
+<section class="tshirt-showcase">
+    <div class="tshirt-container">
+      <!-- Left: T-shirt product cards -->
+      <div class="tshirt-left">
+        <h2 class="section-title">Timeless T-Shirts</h2>
+        <p class="section-subtitle">Elegant. Everyday. Ethnic.</p>
+        <div class="tshirt-grid">
+          <div class="tshirt-card">
+            <img src="/images/sourav1.png" alt="T-shirt 1">
+            <h3>Classic Beige Kurta</h3>
+            <p>₹1499</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+          <div class="tshirt-card">
+            <img src="/images/sourav2.png" alt="T-shirt 2">
+            <h3>Royal Blue Short Kurta</h3>
+            <p>₹1699</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+          <div class="tshirt-card">
+            <img src="/images/sourav3.png" alt="T-shirt 3">
+            <h3>Festive White T-Shirt</h3>
+            <p>₹1399</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right: Model image preview -->
+      <div class="tshirt-right">
+        <img src="/images/sourav1.png" alt="Model Wearing T-Shirt" class="model-img">
+        <img src="/images/sourav2.png" alt="Model Wearing T-Shirt" class="model-img second-img">
+      </div>
+    </div>
+  </section>
+  
+  <!-- tshirt-showcase Section -->
+  <section class="tshirt-showcase">
+    <div class="tshirt-bg"></div>
+    <div class="tshirt-content">
+      <h2 class="section-title">Timeless T-Shirts</h2>
+      <p class="section-subtitle">Elegant. Everyday. Ethnic.</p>
+      <div class="tshirt-grid">
+        <div class="tshirt-card">
+          <img src="/images/sourav1.png" alt="T-shirt 1">
+          <h3>Classic Beige Kurta</h3>
+          <p>₹1499</p>
+          <a href="/mens.html" class="btn-shop">Shop Now</a>
+        </div>
+        <div class="tshirt-card">
+          <img src="/images/sourav2.png" alt="T-shirt 2">
+          <h3>Royal Blue Short Kurta</h3>
+          <p>₹1699</p>
+          <a href="/mens.html" class="btn-shop">Shop Now</a>
+        </div>
+        <div class="tshirt-card">
+          <img src="/images/sourav3.png" alt="T-shirt 3">
+          <h3>Festive White T-Shirt</h3>
+          <p>₹1399</p>
+          <a href="/mens.html" class="btn-shop">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   
 
-<!-- Other content above -->
-
-<!-- Auto-scroll script for new launches 
-<script>
-    const launchSlider = document.querySelector('.new-launches-slider');
-    let scrollTop = 0;
-    setInterval(() => {
-      scrollTop += 1;
-      launchSlider.scrollTo({
-        top: scrollTop,
-        behavior: 'smooth'
-      });
-      if (scrollTop >= launchSlider.scrollHeight - launchSlider.clientHeight) {
-        scrollTop = 0;
-      }
-    }, 50);
-  </script>
--->
-
-<!-- Auto-scroll script for new launches
   <script>
-  const launchSlider = document.querySelector('.new-launches-slider');
-  let scrollLeft = 0;
-  setInterval(() => {
-    scrollLeft += 1;
-    launchSlider.scrollTo({
-      left: scrollLeft,
-      behavior: 'smooth'
-    });
-    if (scrollLeft >= launchSlider.scrollWidth - launchSlider.clientWidth) {
-      scrollLeft = 0;
+    function goToCheckout(name, price, image) {
+      localStorage.setItem("productName", name);
+      localStorage.setItem("productPrice", price);
+      localStorage.setItem("productImage", image);
+      window.location.href = "/checkout.html";
     }
-  }, 50);
+  </script>
+  
+  <!-- Scripts -->
+  <script src="/js/script.js"></script>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobileNav");
+      nav.classList.toggle("show");
+    }
+  </script>
+<!-- Scripts tshirt section -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('tshirtSection');
+    const mediaPreview = section.querySelector('#mediaPreview');
+
+    const mediaList = [
+      { type: 'video', src: '/videos/tshirt1.mp4' },
+      { type: 'video', src: '/videos/tshirt2.mp4' },
+      { type: 'image', src: '/images/sourav1.png' }
+    ];
+
+    let currentMedia = 0;
+
+    function showMedia() {
+      mediaPreview.innerHTML = '';
+      const media = mediaList[currentMedia];
+      let element;
+
+      if (media.type === 'video') {
+        element = document.createElement('video');
+        element.src = media.src;
+        element.autoplay = true;
+        element.muted = true;
+        element.loop = true;
+        element.playsInline = true;
+      } else {
+        element = document.createElement('img');
+        element.src = media.src;
+      }
+
+      element.classList.add('active');
+      mediaPreview.appendChild(element);
+
+      currentMedia = (currentMedia + 1) % mediaList.length;
+    }
+
+    if (section) {
+      showMedia();
+      setInterval(showMedia, 5000);
+    }
+  });
 </script>
--->
-  
-  
 
   
 </body>

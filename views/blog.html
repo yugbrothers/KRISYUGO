@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - KRISYUG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('images/curated1.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .container {
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      text-align: center;
+      color: #f0c040;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 20px;
+      color: #fff;
+    }
+
+    .info h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    .info p {
+      font-size: 15px;
+      margin: 8px 0;
+    }
+
+    .info .date {
+      font-size: 13px;
+      opacity: 0.8;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>KRISYUG Product Stories</h1>
+    <div class="grid">
+
+      <div class="product">
+        <img src="images/lady1.png" alt="Elegant Wear">
+        <div class="info">
+          <h3>Tradition Meets Grace: Elegant Lady Outfit</h3>
+          <p>This piece is a perfect blend of tradition and modern grace, designed with premium rayon and accented with fine beads. It celebrates Indian craftsmanship and elevates festive wear with comfort and elegance.</p>
+          <p class="date">Posted on: April 19, 2025</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/tanmay1.png" alt="Urban Outfit">
+        <div class="info">
+          <h3>Urban Edge: Tanmay Style Statement</h3>
+          <p>Designed for the modern man, this urban outfit speaks volumes about minimalism and functionality. The linen texture breathes well, while its zippered accents give it that cutting-edge streetwear vibe.</p>
+          <p class="date">Posted on: April 29, 2025</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/brother1.png" alt="Ethnic Set">
+        <div class="info">
+          <h3>Cultural Bond: Brother’s Ethnic Set</h3>
+          <p>Rich in traditional roots, this silk-based ethnic set is specially crafted for ceremonial wear. The embroidery threadwork adds a regal flair—perfect for Raksha Bandhan or festive family gatherings.</p>
+          <p class="date">Posted on: April 28, 2025</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/flora6.png" alt="AI Print Tee">
+        <div class="info">
+          <h3>Innovation in Threads: Digital Art Tee</h3>
+          <p>This organic cotton tee features a next-gen AI-designed art print, blending fashion and tech. It reflects the voice of youth culture and sustainable innovation, straight out of our Surat Lab.</p>
+          <p class="date">Posted on: April 23, 2025</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/boss1.png" alt="Premium Tee">
+        <div class="info">
+          <h3>Boss Premium Tee: Classic Reinvented</h3>
+          <p>The Boss Premium Tee is our tribute to timeless streetwear culture. With ultra-soft cotton and a bold printed finish, it’s both stylish and functional—tailored for those who lead by design.</p>
+          <p class="date">Posted on: April 18, 2025</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

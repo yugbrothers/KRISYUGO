@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KRISYUG - Timeless Ethnic Fashion</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Dancing+Script&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5em;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background: url('/images/yug1.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    .hero {
+  background: url('/images/brother1.png') no-repeat center center/cover;
+  transition: background-image 1s ease-in-out;
+    }
+
+
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    .hero-content h1,
+    .hero-content p {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .hero-content h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+
+    .btn-primary {
+      font-family: 'Cormorant Garamond', serif;
+      background-color: transparent;
+      color: #fff;
+      padding: 12px 28px;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* MEN SECTION STYLES */
+    .men-section {
+      background-color: #f8f8f8;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .men-heading h2 {
+      font-size: 2.5em;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 10px;
+    }
+
+    .men-heading p {
+      font-size: 1.2em;
+      color: #666;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .men-slider {
+      display: flex;
+      flex-direction: row-reverse; /* right to left */
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .men-item {
+      flex: 0 0 auto;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .men-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .men-item:hover {
+      transform: scale(1.05);
+    }
+    .men-hero {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.men-slider-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.men-slide {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.men-slide:nth-child(1) {
+  background-image: url('/images/brother1.png'); /* Replace with your images */
+}
+.men-slide:nth-child(2) {
+  background-image: url('/images/tradoboy2.png');
+}
+.men-slide:nth-child(3) {
+  background-image: url('/images/crazy13.png');
+}
+
+.men-slide:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.btn-showcase {
+  font-family: 'Cormorant Garamond', serif;
+  display: inline-block;
+  padding: 10px 24px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-showcase:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+    /* New Launches Section */
+.new-launches-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.new-launches-heading h2 {
+  font-size: 2.5em;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
+  color: #b8860b;
+}
+
+.new-launches-heading p {
+  font-size: 1.2em;
+  color: #666;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 40px;
+}
+
+.new-launches-slider {
+  display: flex;
+  flex-direction: row-reverse; /* Slide right to left */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+}
+
+.launch-item {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.launch-item:hover {
+  transform: scale(1.05);
+}
+
+.launch-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.launch-item .btn-primary {
+  margin: 15px auto 20px;
+  display: inline-block;
+  border-color: #b8860b;
+}
+.tshirt-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.media-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.media-preview video,
+.media-preview img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.media-preview .active {
+  opacity: 1;
+}
+
+.tshirt-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+}
+
+.tshirt-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.tshirt-content p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.tshirt-content .btn-primary {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1em;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tshirt-content .btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+
+.tshirt-showcase {
+  position: relative;
+  height: 100vh; /* full screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 20px; /* Reduced to avoid vertical scroll */
+}
+
+.tshirt-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: url('/images/sourav2.png') center/cover no-repeat;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.tshirt-content {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3em;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2em;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.tshirt-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.tshirt-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tshirt-card:hover {
+  transform: translateY(-10px);
+}
+
+.tshirt-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.tshirt-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4em;
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.tshirt-card p {
+  color: #b8860b;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-shop {
+  display: inline-block;
+  margin: 15px 0 20px;
+  padding: 10px 24px;
+  border: 2px solid #b8860b;
+  color: #b8860b;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+  background-color: #b8860b;
+  color: #fff;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">KRISYUG</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#men">Men</a>
+      <a href="#about">About</a>
+      <a href="#collections">Collections</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="/people.html">people</a>
+      <a href="/careers.html">careers</a>
+      <a href="#contact">Contact</a>
+      <a href="/signin.html">Sign In</a>
+      <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Timeless Ethnic Wear</h1>
+    <p>Experience elegance with every thread</p>
+    <a href="#men" class="btn-primary">Shop Now</a>
+  </div>
+</section>
+  <!-- ✅ JS SLIDER SCRIPT -->
+<script>
+  const images = [
+    "/images/brother1.png",
+    "/images/flora5.png",
+    "/images/flora3.png"
+  ];
+  let current = 0;
+  const slider = document.querySelector('.hero');
+
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    slider.style.backgroundImage = `url(${images[current]})`;
+  }, 2000);
+</script>
+
+
+
+  <!-- New Launches Section -->
+<section class="new-launches-section">
+  <div class="new-launches-heading">
+    <h2>New Launches</h2>
+    <p>Explore our latest ethnic wear crafted for elegance and grace.</p>
+  </div>
+
+  <div class="new-launches-slider">
+    <div class="launch-item">
+      <img src="/images/flora5.png" alt="New Product 1" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora2.png" alt="New Product 2" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora3.png" alt="New Product 3" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora4.png" alt="New Product 4" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+   <!-- Men Section -->
+   <section id="men" class="men-hero">
+    <div class="men-slider-wrapper">
+      <div class="men-slide">
+        <div class="overlay">
+          <h2>Classic Sherwanis</h2>
+          <a href="/mens.html" class="btn-showcase">Shop Now</a>
+        </div>
+      </div>
+      <div class="men-slide">
+        <div class="overlay">
+          <h2>Modern Kurta Sets</h2>
+          <a href="/mens.html" class="btn-showcase">Shop Now</a>
+        </div>
+      </div>
+      <div class="men-slide">
+        <div class="overlay">
+          <h2>Festive Fashion</h2>
+          <a href="/mens.html" class="btn-showcase">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- tshirt Section -->
+
+  <section class="tshirt-section" id="tshirtSection">
+    <div class="media-preview" id="mediaPreview"></div>
+    <div class="tshirt-content">
+      <h1>Explore Timeless Tees</h1>
+      <p>Premium ethnic wear redefined for everyday comfort.</p>
+      <a href="/mens.html" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- T-Shirts Showcase Section -->
+<section class="tshirt-showcase">
+    <div class="tshirt-container">
+      <!-- Left: T-shirt product cards -->
+      <div class="tshirt-left">
+        <h2 class="section-title">Timeless T-Shirts</h2>
+        <p class="section-subtitle">Elegant. Everyday. Ethnic.</p>
+        <div class="tshirt-grid">
+          <div class="tshirt-card">
+            <img src="/images/sourav1.png" alt="T-shirt 1">
+            <h3>Classic Beige Kurta</h3>
+            <p>₹1499</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+          <div class="tshirt-card">
+            <img src="/images/sourav2.png" alt="T-shirt 2">
+            <h3>Royal Blue Short Kurta</h3>
+            <p>₹1699</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+          <div class="tshirt-card">
+            <img src="/images/sourav3.png" alt="T-shirt 3">
+            <h3>Festive White T-Shirt</h3>
+            <p>₹1399</p>
+            <a href="/mens.html" class="btn-shop">Shop Now</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right: Model image preview -->
+      <div class="tshirt-right">
+        <img src="/images/sourav1.png" alt="Model Wearing T-Shirt" class="model-img">
+        <img src="/images/sourav2.png" alt="Model Wearing T-Shirt" class="model-img second-img">
+      </div>
+    </div>
+  </section>
+  
+  <!-- tshirt-showcase Section -->
+  <section class="tshirt-showcase">
+    <div class="tshirt-bg"></div>
+    <div class="tshirt-content">
+      <h2 class="section-title">Timeless T-Shirts</h2>
+      <p class="section-subtitle">Elegant. Everyday. Ethnic.</p>
+      <div class="tshirt-grid">
+        <div class="tshirt-card">
+          <img src="/images/sourav1.png" alt="T-shirt 1">
+          <h3>Classic Beige Kurta</h3>
+          <p>₹1499</p>
+          <a href="/mens.html" class="btn-shop">Shop Now</a>
+        </div>
+        <div class="tshirt-card">
+          <img src="/images/sourav2.png" alt="T-shirt 2">
+          <h3>Royal Blue Short Kurta</h3>
+          <p>₹1699</p>
+          <a href="/mens.html" class="btn-shop">Shop Now</a>
+        </div>
+        <div class="tshirt-card">
+          <img src="/images/sourav3.png" alt="T-shirt 3">
+          <h3>Festive White T-Shirt</h3>
+          <p>₹1399</p>
+          <a href="/mens.html" class="btn-shop">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <script>
+    function goToCheckout(name, price, image) {
+      localStorage.setItem("productName", name);
+      localStorage.setItem("productPrice", price);
+      localStorage.setItem("productImage", image);
+      window.location.href = "/checkout.html";
+    }
+  </script>
+  
+  <!-- Scripts -->
+  <script src="/js/script.js"></script>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("mobileNav");
+      nav.classList.toggle("show");
+    }
+  </script>
+<!-- Scripts tshirt section -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.getElementById('tshirtSection');
+    const mediaPreview = section.querySelector('#mediaPreview');
+
+    const mediaList = [
+      { type: 'video', src: '/videos/tshirt1.mp4' },
+      { type: 'video', src: '/videos/tshirt2.mp4' },
+      { type: 'image', src: '/images/sourav1.png' }
+    ];
+
+    let currentMedia = 0;
+
+    function showMedia() {
+      mediaPreview.innerHTML = '';
+      const media = mediaList[currentMedia];
+      let element;
+
+      if (media.type === 'video') {
+        element = document.createElement('video');
+        element.src = media.src;
+        element.autoplay = true;
+        element.muted = true;
+        element.loop = true;
+        element.playsInline = true;
+      } else {
+        element = document.createElement('img');
+        element.src = media.src;
+      }
+
+      element.classList.add('active');
+      mediaPreview.appendChild(element);
+
+      currentMedia = (currentMedia + 1) % mediaList.length;
+    }
+
+    if (section) {
+      showMedia();
+      setInterval(showMedia, 5000);
+    }
+  });
+</script>
+
+  
+</body>
+</html>

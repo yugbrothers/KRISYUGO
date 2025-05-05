@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Work Dashboard - KRISYUG</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet"/>
+        <style>
+          body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('images/curated1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+          }
+      
+          .container {
+            padding: 40px;
+            max-width: 1400px;
+            margin: auto;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+          }
+      
+          .container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.55); /* Dark overlay */
+            z-index: -1;
+            border-radius: 20px;
+          }
+      
+          h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            text-align: center;
+            color: #f0c040;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+          }
+      
+          .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+          }
+      
+          .product {
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(6px);
+          }
+      
+          .product:hover {
+            transform: translateY(-10px);
+          }
+      
+          .product img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+          }
+      
+          .info {
+            padding: 20px;
+            color: #fff;
+          }
+      
+          .info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px black;
+          }
+      
+          .info p {
+            font-size: 15px;
+            margin: 5px 0;
+          }
+      
+          .info label, .info select {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+          }
+      
+          .info select {
+            padding: 5px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+          }
+      
+          .info button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #f0c040;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+      
+          .info button:hover {
+            background-color: #d9a620;
+          }
+        </style>
+      </head>
+<body>
+  <div class="container">
+    <h1>Production & Work Tracking</h1>
+    <div class="grid">
+      <!-- Sample block: Repeat with different images -->
+      <div class="product">
+        <img src="images/curated8.png" alt="Design Image">
+        <div class="info">
+          <h3>Design: Boss Premium Tee</h3>
+          <p><strong>Raw Materials Required:</strong> Cotton Fabric, Dye, Print Sheet</p>
+          <p><strong>Materials Available:</strong> Cotton Fabric, Dye</p>
+          <p><strong>Design Reference:</strong><br><img src="images/boss2.png" alt="Reference" style="width:100%;height:auto;border-radius:10px;margin-top:5px;"></p>
+          <p><strong>Printing Location:</strong> Mumbai Unit 3</p>
+          <p><strong>Assigned Team:</strong> Mumbai Textile Crew</p>
+          <p><strong>Team In-charge:</strong> Ramesh Chauhan</p>
+          <p><strong>Status:</strong> In Progress</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/lady1.png" alt="Design Image">
+        <div class="info">
+          <h3>Design: Elegant Lady Outfit</h3>
+          <p><strong>Raw Materials Required:</strong> Rayon, Thread, Beads</p>
+          <p><strong>Materials Available:</strong> Rayon, Beads</p>
+          <p><strong>Design Reference:</strong><br><img src="images/flora3.png" alt="Reference" style="width:100%;height:auto;border-radius:10px;margin-top:5px;"></p>
+          <p><strong>Printing Location:</strong> Delhi Central Workshop</p>
+          <p><strong>Assigned Team:</strong> Women's Wear Team</p>
+          <p><strong>Team In-charge:</strong> Sneha Kapoor</p>
+          <p><strong>Status:</strong> Ready for Production</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/tanmay1.png" alt="Design Image">
+        <div class="info">
+          <h3>Design: Tanmay Urban Style</h3>
+          <p><strong>Raw Materials Required:</strong> Linen, Zipper</p>
+          <p><strong>Materials Available:</strong> Linen</p>
+          <p><strong>Design Reference:</strong><br><img src="images/tanmay2.png" alt="Reference" style="width:100%;height:auto;border-radius:10px;margin-top:5px;"></p>
+          <p><strong>Printing Location:</strong> Bengaluru Studio</p>
+          <p><strong>Assigned Team:</strong> Urban Menwear</p>
+          <p><strong>Team In-charge:</strong> Akash Malhotra</p>
+          <p><strong>Status:</strong> Pending Raw Materials</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/brother1.png" alt="Design Image">
+        <div class="info">
+          <h3>Design: Ethnic Brother Set</h3>
+          <p><strong>Raw Materials Required:</strong> Silk, Embroidery Thread</p>
+          <p><strong>Materials Available:</strong> Silk, Thread</p>
+          <p><strong>Design Reference:</strong><br><img src="images/bro1.png" alt="Reference" style="width:100%;height:auto;border-radius:10px;margin-top:5px;"></p>
+          <p><strong>Printing Location:</strong> Jaipur Artisans Hub</p>
+          <p><strong>Assigned Team:</strong> Ethnic Line Unit</p>
+          <p><strong>Team In-charge:</strong> Kavita Mishra</p>
+          <p><strong>Status:</strong> Completed</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="images/flora6.png" alt="Design Image">
+        <div class="info">
+          <h3>Design: Digital Art Tee</h3>
+          <p><strong>Raw Materials Required:</strong> Organic Cotton, AI Print Film</p>
+          <p><strong>Materials Available:</strong> Organic Cotton</p>
+          <p><strong>Design Reference:</strong><br><img src="images/crazy13.png" alt="Reference" style="width:100%;height:auto;border-radius:10px;margin-top:5px;"></p>
+          <p><strong>Printing Location:</strong> Surat Lab</p>
+          <p><strong>Assigned Team:</strong> Innovation Cell</p>
+          <p><strong>Team In-charge:</strong> Aniket Sharma</p>
+          <p><strong>Status:</strong> Design Approved</p>
+        </div>
+      </div>
+      <!-- password section 
+      <script>
+        const password = prompt("Enter company password:");
+        if (password !== "yourSecret123") {
+          alert("Access Denied!");
+          window.location.href = "index.html";
+        }
+      </script>
+      
+    -->
+    </div>
+  </div>
+</body>
+</html>

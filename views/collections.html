@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Collection - KRISYUG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: url('twam1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.88);
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      text-align: center;
+      color: #b8860b;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .info h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .info select {
+      margin: 5px 0;
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .info button {
+      padding: 10px 20px;
+      background-color: #b8860b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .info button:hover {
+      background-color: #a87408;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Our Complete Collection</h1>
+    <div class="grid">
+      <!-- Begin product cards -->
+      <div class="product"><img src="images/lady1.png"><div class="info"><h3>Elegant Lady Outfit</h3><p>₹3,599</p><label>Size:</label><select><option>M</option><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/model1.png"><div class="info"><h3>Oversized Model Tee</h3><p>₹2,299</p><label>Size:</label><select><option>S</option><option>M</option><option>L</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/sara1.png"><div class="info"><h3>Floral Sara Look</h3><p>₹3,099</p><label>Size:</label><select><option>Free Size</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/sara2.png"><div class="info"><h3>Sara Ethnic Set</h3><p>₹3,899</p><label>Size:</label><select><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/sourav1.png"><div class="info"><h3>Sourav Casual</h3><p>₹1,899</p><label>Size:</label><select><option>S</option><option>M</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/sourav2.png"><div class="info"><h3>Premium Shirt</h3><p>₹2,499</p><label>Size:</label><select><option>M</option><option>L</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/sourav3.png"><div class="info"><h3>Sourav Trend Look</h3><p>₹2,799</p><label>Size:</label><select><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/tanmay1.png"><div class="info"><h3>Tanmay Urban Style</h3><p>₹2,799</p><label>Size:</label><select><option>M</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/tanmay2.png"><div class="info"><h3>Tanmay Street Tee</h3><p>₹1,999</p><label>Size:</label><select><option>S</option><option>L</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/tanmay3.png"><div class="info"><h3>Tanmay Festive Set</h3><p>₹3,200</p><label>Size:</label><select><option>Free Size</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/boss2.png"><div class="info"><h3>Oversized T-shirt</h3><p>Trendy street style look</p><label>Size:</label><select><option>S</option><option>M</option><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/crazy1.png"><div class="info"><h3>Streetwear</h3><p>Urban oversized fashion</p><label>Size:</label><select><option>S</option><option>M</option><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/flora3.png"><div class="info"><h3>Graphic Tee</h3><p>Bold and expressive artwork</p><label>Size:</label><select><option>S</option><option>M</option><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/bro1.png"><div class="info"><h3>Traditional Wear</h3><p>Perfect for festive occasions</p><label>Size:</label><select><option>S</option><option>M</option><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/brother1.png"><div class="info"><h3>Ethnic Set</h3><p>Designed for traditional events</p><label>Size:</label><select><option>S</option><option>M</option><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+      <div class="product"><img src="images/flora6.png"><div class="info"><h3>Digital Art Tee</h3><p>AI meets fashion</p><label>Size:</label><select><option>S</option><option>M</option><option>L</option><option>XL</option></select><br><button>Buy Now</button></div></div>
+    </div>
+  </div>
+</body>
+</html>
