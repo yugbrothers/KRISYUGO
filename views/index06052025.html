@@ -230,11 +230,25 @@
   color: #000;
 }
 
-    /* New Launches Section */
+
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('images/curated1.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+
 .new-launches-section {
-  background-color: #fff;
+  background: url('images/launch-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   padding: 80px 20px;
   text-align: center;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
 }
 
 .new-launches-heading h2 {
@@ -246,79 +260,240 @@
 
 .new-launches-heading p {
   font-size: 1.2em;
-  color: #666;
+  color: #ddd;
   font-family: 'Josefin Sans', sans-serif;
   margin-bottom: 40px;
 }
 
 .new-launches-slider {
   display: flex;
-  flex-direction: row-reverse; /* Slide right to left */
+  flex-direction: row;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
+  max-width: 100%;
 }
 
 .launch-item {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
   flex: 0 0 auto;
-  width: 300px;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s ease;
-  text-align: center;
 }
 
 .launch-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
 }
 
 .launch-item img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 10px;
 }
 
-.launch-item .btn-primary {
-  margin: 15px auto 20px;
+.btn-primary {
+  margin-top: 15px;
   display: inline-block;
-  border-color: #b8860b;
+  border: 2px solid #b8860b;
+  background: transparent;
+  color: #b8860b;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
 }
-.tshirt-section {
+
+.btn-primary:hover {
+  background: #b8860b;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Featured Collection Section */
+.featured-collection {
   position: relative;
   height: 100vh;
-  width: 100%;
+  background: url('/images/flora11.png') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #000;
+  margin-top: 80px;
 }
 
-.media-preview {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+.featured-overlay {
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
-  z-index: 0;
+  height: 100%;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-content {
+  text-align: center;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-content .section-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.featured-content .section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.tshirt-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tshirt-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tshirt-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.tshirt-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.tshirt-card h3 {
+  color: #111;
+  margin: 15px 0 5px;
+}
+
+.tshirt-card p {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.btn-shop {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-shop:hover {
+  background: #333;
+}
+
+/* Curated Section */
+.curated-section {
+  background: linear-gradient(to right, #fffdf5, #f9f0e6);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.curated-heading h2 {
+  font-size: 2.8em;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 10px;
+  color: #4b2e2e;
+}
+
+.curated-heading p {
+  font-size: 1.2em;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #6b4b3e;
+  margin-bottom: 50px;
+}
+
+.curated-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.curated-card {
+  background-color: #ffffff;
+  border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.media-preview video,
-.media-preview img {
-  position: absolute;
-  height: 100%;
+.curated-card:hover {
+  transform: translateY(-10px);
+}
+
+.curated-card img {
   width: 100%;
-  object-fit: cover;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
+  height: auto;
+  display: block;
 }
 
-.media-preview .active {
-  opacity: 1;
+.card-info {
+  padding: 20px;
+}
+
+.card-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4b2e2e;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-secondary:hover {
+  background-color: #6d3f3f;
 }
 
 
@@ -420,6 +595,10 @@ body {
 
 
 
+
+
+
+
   </style>
 </head>
 <body>
@@ -454,7 +633,7 @@ body {
   <!-- ✅ JS SLIDER SCRIPT -->
 <script>
   const images = [
-    "/images/brother1.png",
+    "/images/curated1.png",
     "/images/flora5.png",
     "/images/flora3.png"
   ];
@@ -468,7 +647,38 @@ body {
 </script>
 
 
-
+  <!-- Curated Collection Section -->
+  <section class="curated-section">
+    <div class="curated-heading">
+      <h2>Curated Collection</h2>
+      <p>Handpicked styles just for you</p>
+    </div>
+  
+    <div class="curated-grid">
+      <div class="curated-card">
+        <img src="/images/flora12.png" alt="Curated Look 1">
+        <div class="card-info">
+          <h3>Elegant Kurti</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/tanmay1.png" alt="Curated Look 2">
+        <div class="card-info">
+          <h3>Bold Festive Wear</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/curated1.png" alt="Curated Look 3">
+        <div class="card-info">
+          <h3>Modern Saree</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- New Launches Section -->
 <section class="new-launches-section">
   <div class="new-launches-heading">
@@ -500,11 +710,122 @@ body {
   </div>
 </section>
 
+
+<div class="new-launches-section">
+    <div class="new-launches-heading">
+      <h2>New Product Launches</h2>
+      <p>Discover the latest arrivals handpicked for you</p>
+    </div>
+    <div class="new-launches-slider">
+      <div class="launch-item">
+        <img src="images/product1.jpg" alt="New Product 1" />
+        <button class="btn-primary">View Product</button>
+      </div>
+      <div class="launch-item">
+        <img src="images/product2.jpg" alt="New Product 2" />
+        <button class="btn-primary">View Product</button>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+  
+
+<section class="new-launches-section">
+  <h2 class="section-title">Best Sellers</h2>
+  <p class="section-subtitle">Most loved pieces from our customers</p>
+  <div class="launch-grid">
+    <div class="launch-item">
+      <img src="/images/curated1.png" alt="Best Seller 1">
+      <h3>Signature Kurta</h3>
+      <p>₹1399</p>
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/best2.png" alt="Best Seller 2">
+      <h3>Festive Sherwani</h3>
+      <p>₹2499</p>
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/best3.png" alt="Best Seller 3">
+      <h3>Elegant Anarkali</h3>
+      <p>₹1899</p>
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- Festive Favourites Section -->
+<section class="new-launches-section">
+    <div class="new-launches-heading">
+      <h2>Festive Favourites</h2>
+      <p>Celebrate in style with our top picks for the festive season.</p>
+    </div>
+  
+    <div class="new-launches-slider">
+      <div class="launch-item">
+        <img src="/images/flora12.png" alt="Festive Product 1" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
+      <div class="launch-item">
+        <img src="/images/tanmay1.png" alt="Festive Product 2" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
+      <div class="launch-item">
+        <img src="/images/tanmay2.png" alt="Festive Product 3" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
+      <div class="launch-item">
+        <img src="/images/tanmay3.png" alt="Festive Product 4" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
+    </div>
    
+  </section>
 
- 
+  
 
-  <!-- TSHIRT section -->
+  <!-- Curated Collection Section -->
+<section class="curated-section">
+    <div class="curated-heading">
+      <h2>Curated Collection</h2>
+      <p>Handpicked styles just for you</p>
+    </div>
+  
+    <div class="curated-grid">
+      <div class="curated-card">
+        <img src="/images/flora12.png" alt="Curated Look 1">
+        <div class="card-info">
+          <h3>Elegant Kurti</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/tanmay1.png" alt="Curated Look 2">
+        <div class="card-info">
+          <h3>Bold Festive Wear</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/curated1.png" alt="Curated Look 3">
+        <div class="card-info">
+          <h3>Modern Saree</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+
+
+
+ <!-- TSHIRT section -->
   <section class="tshirt-section">
     <div class="tshirt-container">
       <h1>T-Shirt Spotlight</h1>
@@ -530,67 +851,61 @@ body {
             <button onclick="location.href='product-details/floral-breeze.html'">Discover</button>
           </div>
         </div>
-
-  <script>
-    function goToCheckout(name, price, image) {
-      localStorage.setItem("productName", name);
-      localStorage.setItem("productPrice", price);
-      localStorage.setItem("productImage", image);
-      window.location.href = "/checkout.html";
-    }
-  </script>
   
-  <!-- Scripts -->
-  <script src="/js/script.js"></script>
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("mobileNav");
-      nav.classList.toggle("show");
-    }
-  </script>
-<!-- Scripts tshirt section -->
+        <!-- Add more products as needed -->
+      </div>
+    </div>
+  </section>
+  
+
+
+  
+
+   
+
+ 
+  
+
+ 
+  
+
+<!-- Other content above -->
+
+<!-- Auto-scroll script for new launches 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const section = document.getElementById('tshirtSection');
-    const mediaPreview = section.querySelector('#mediaPreview');
-
-    const mediaList = [
-      { type: 'video', src: '/videos/tshirt1.mp4' },
-      { type: 'video', src: '/videos/tshirt2.mp4' },
-      { type: 'image', src: '/images/sourav1.png' }
-    ];
-
-    let currentMedia = 0;
-
-    function showMedia() {
-      mediaPreview.innerHTML = '';
-      const media = mediaList[currentMedia];
-      let element;
-
-      if (media.type === 'video') {
-        element = document.createElement('video');
-        element.src = media.src;
-        element.autoplay = true;
-        element.muted = true;
-        element.loop = true;
-        element.playsInline = true;
-      } else {
-        element = document.createElement('img');
-        element.src = media.src;
+    const launchSlider = document.querySelector('.new-launches-slider');
+    let scrollTop = 0;
+    setInterval(() => {
+      scrollTop += 1;
+      launchSlider.scrollTo({
+        top: scrollTop,
+        behavior: 'smooth'
+      });
+      if (scrollTop >= launchSlider.scrollHeight - launchSlider.clientHeight) {
+        scrollTop = 0;
       }
+    }, 50);
+  </script>
+-->
 
-      element.classList.add('active');
-      mediaPreview.appendChild(element);
-
-      currentMedia = (currentMedia + 1) % mediaList.length;
+<!-- Auto-scroll script for new launches
+  <script>
+  const launchSlider = document.querySelector('.new-launches-slider');
+  let scrollLeft = 0;
+  setInterval(() => {
+    scrollLeft += 1;
+    launchSlider.scrollTo({
+      left: scrollLeft,
+      behavior: 'smooth'
+    });
+    if (scrollLeft >= launchSlider.scrollWidth - launchSlider.clientWidth) {
+      scrollLeft = 0;
     }
-
-    if (section) {
-      showMedia();
-      setInterval(showMedia, 5000);
-    }
-  });
+  }, 50);
 </script>
+-->
+  
+  
 
   
 </body>
