@@ -232,7 +232,13 @@
 
 
 
-
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('images/curated1.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
 
 
 .new-launches-section {
@@ -293,7 +299,10 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover; /* ensures images don’t stretch weirdly */
+  max-height: 280px; /* optional cap to avoid overly tall images */
 }
+
 
 .btn-primary {
   margin-top: 15px;
@@ -313,6 +322,23 @@
 .btn-primary:hover {
   background: #b8860b;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .new-launches-section {
+    height: auto;
+    padding: 60px 10px;
+    background-attachment: scroll; /* disables fixed background on mobile for performance */
+  }
+
+  .launch-item {
+    max-width: 90vw;
+    padding: 15px;
+  }
+
+  .launch-item img {
+    max-height: 220px; /* reduce height on mobile */
+  }
 }
 
 
