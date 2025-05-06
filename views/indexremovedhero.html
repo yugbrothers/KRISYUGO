@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KRISYUG - Timeless Ethnic Fashion</title>
 
   <!-- Fonts -->
@@ -52,19 +51,16 @@
     }
 
     .hero {
-  height: 100vh;
-  background: no-repeat center center/cover;
-  transition: background-image 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  position: relative;
-}
-
-    
-
+      background: url('/images/brother1.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      transition: background-image 1s ease-in-out;
+    }
 
     .hero-content {
       background: rgba(0, 0, 0, 0.5);
@@ -107,228 +103,49 @@
       color: #000;
     }
 
-    /* MEN SECTION STYLES */
-    .men-section {
-      background-color: #f8f8f8;
-      padding: 80px 20px;
-      text-align: center;
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      .logo {
+        font-size: 2em;
+      }
+
+      .nav a {
+        margin: 10px 0;
+        display: block;
+      }
+
+      .hero {
+        background-image: url('/images/curatedmobile1.png');
+        background-attachment: scroll;
+        background-position: center top;
+        height: 100vh;
+      }
+
+      .hero-content {
+        padding: 20px;
+        margin: 0 10px;
+      }
+
+      .hero-content h1 {
+        font-size: 2em;
+      }
+
+      .hero-content p {
+        font-size: 1.2em;
+      }
+
+      .btn-primary {
+        font-size: 14px;
+        padding: 10px 24px;
+      }
     }
 
-    .men-heading h2 {
-      font-size: 2.5em;
-      font-family: 'Cormorant Garamond', serif;
-      margin-bottom: 10px;
-    }
-
-    .men-heading p {
-      font-size: 1.2em;
-      color: #666;
-      font-family: 'Josefin Sans', sans-serif;
-      margin-bottom: 40px;
-    }
-
-    .men-slider {
-      display: flex;
-      flex-direction: row-reverse; /* right to left */
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .men-item {
-      flex: 0 0 auto;
-      width: 300px;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-
-    .men-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 10px;
-    }
-
-    .men-item:hover {
-      transform: scale(1.05);
-    }
-    .men-hero {
-  background-color: #f8f8f8;
-  padding: 80px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.men-slider-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 20px 10px;
-}
-
-.men-slide {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 400px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.men-slide:nth-child(1) {
-  background-image: url('/images/brother1.png'); /* Replace with your images */
-}
-.men-slide:nth-child(2) {
-  background-image: url('/images/tradoboy2.png');
-}
-.men-slide:nth-child(3) {
-  background-image: url('/images/crazy13.png');
-}
-
-.men-slide:hover {
-  transform: scale(1.05);
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-}
-
-.overlay h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.btn-showcase {
-  font-family: 'Cormorant Garamond', serif;
-  display: inline-block;
-  padding: 10px 24px;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: 10px;
-}
-
-.btn-showcase:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-
-
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: url('images/curated1.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-}
-
-
-.new-launches-section {
-  background: url('images/curated1.png') no-repeat center center fixed;
-  background-size: cover;
-  padding: 80px 20px;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
-}
-
-.new-launches-heading h2 {
-  font-size: 2.5em;
-  font-family: 'Cormorant Garamond', serif;
-  margin-bottom: 10px;
-  color: #b8860b;
-}
-
-.new-launches-heading p {
-  font-size: 1.2em;
-  color: #ddd;
-  font-family: 'Josefin Sans', sans-serif;
-  margin-bottom: 40px;
-}
-
-.new-launches-slider {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  gap: 30px;
-  padding: 20px;
-  max-width: 100%;
-}
-
-.launch-item {
-  background-color: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  width: 100%;
-  max-width: 300px;
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.launch-item:hover {
-  transform: translateY(-10px);
-}
-
-.launch-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.btn-primary {
-  margin-top: 15px;
-  display: inline-block;
-  border: 2px solid #b8860b;
-  background: transparent;
-  color: #b8860b;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-weight: bold;
-  font-family: 'Josefin Sans', sans-serif;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #b8860b;
-  color: #fff;
-}
-
-
-
-
-
-
-
-
-
+    
 
 
 
@@ -499,39 +316,27 @@ body {
 
 
 
-/* TSHIRT section*/
-
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: url('images/curated1.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-}
-
+/* TSHIRT SECTION */
 .tshirt-container {
-  padding: 40px;
+  padding: 80px 20px;
   max-width: 1400px;
   margin: auto;
   border-radius: 20px;
   position: relative;
   z-index: 1;
-  background: url('images/curated1.png') no-repeat center center fixed;
-  background-size: cover;
-  padding: 80px 20px;
   text-align: center;
-  overflow: hidden;
-  position: relative;
-  height: 100vh;
+  overflow: visible;
+  background: url('images/curated1.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
 }
 
 .tshirt-container::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.55);
   background: rgba(0, 0, 0, 0.3);
-
   z-index: -1;
   border-radius: 20px;
 }
@@ -539,15 +344,14 @@ body {
 .tshirt-container h1 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
-  text-align: center;
   color: #f0c040;
   margin-bottom: 50px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
@@ -566,23 +370,23 @@ body {
 
 .product img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
 }
 
 .info {
-  padding: 20px;
+  padding: 15px;
   color: #fff;
 }
 
 .info h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 10px;
   text-shadow: 1px 1px 2px black;
 }
 
 .info p {
-  font-size: 15px;
+  font-size: 14px;
   margin: 5px 0;
 }
 
@@ -602,33 +406,139 @@ body {
   background-color: #d9a620;
 }
 
-
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-    background-position: center top;
-  }
-}
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    min-height: 100vh;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: url('images/curated1.png') no-repeat center center fixed;
+/* NEW LAUNCHES SECTION */
+.new-launches-section {
+  background: url('images/curated1.png') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  height: auto;
+}
+
+.new-launches-heading h2 {
+  font-size: 2.5em;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
+  color: #b8860b;
+}
+
+.new-launches-heading p {
+  font-size: 1.2em;
+  color: #ddd;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 40px;
+}
+
+.new-launches-slider {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.launch-item {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  width: 100%;
+  max-width: 280px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.launch-item:hover {
+  transform: translateY(-10px);
+}
+
+.launch-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  margin-top: 15px;
+  display: inline-block;
+  border: 2px solid #b8860b;
+  background: transparent;
+  color: #b8860b;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #b8860b;
   color: #fff;
 }
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  body,
+  .tshirt-container,
+  .new-launches-section {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .tshirt-container {
+    background-image: url('images/curatedmobile1.png');
+  }
+
+  .new-launches-section {
+    background-image: url('images/curatedmobile1.png');
+  }
+
+  .tshirt-container h1 {
+    font-size: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product img {
+    height: 200px;
+  }
+
+  .info h3 {
+    font-size: 18px;
+  }
+
+  .launch-item {
+    max-width: 240px;
+    padding: 10px;
+  }
+
+  .launch-item img {
+    height: 180px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+
 
 
 
@@ -659,64 +569,29 @@ body {
     </nav>
   </header>
 
-  <!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Timeless Ethnic Wear</h1>
-    <p>Experience elegance with every thread</p>
-    <a href="#men" class="btn-primary">Shop Now</a>
-  </div>
-</section>
-  <!-- ✅ JS SLIDER SCRIPT 
-<script>
-  const images = [
-    "/images/curated1.png",
-    "/images/flora5.png",
-    "/images/flora3.png"
-  ];
-  let current = 0;
-  const slider = document.querySelector('.hero');
-
-  setInterval(() => {
-    current = (current + 1) % images.length;
-    slider.style.backgroundImage = `url(${images[current]})`;
-  }, 2000);
-</script>
--->
-<script>
-    const images = [
-      {
-        desktop: "/images/curated1.png",
-        mobile: "/images/curatedmobile1.png"
-      },
-      {
-        desktop: "/images/flora5.png",
-        mobile: "/images/floramobile2.png"
-      },
-      {
-        desktop: "/images/flora3.png",
-        mobile: "/images/floramobile3.png"
-      }
+  <script>
+    const isMobile = window.innerWidth <= 768;
+    const desktopImages = [
+      "/images/curated1.png",
+      "/images/flora5.png",
+      "/images/flora3.png"
     ];
+    const mobileImages = [
+      "/images/curatedmobile1.png",
+      "/images/floramobile2.png",
+      "/images/floramobile3.png"
+    ];
+    const images = isMobile ? mobileImages : desktopImages;
   
     let current = 0;
     const slider = document.querySelector('.hero');
   
-    function updateBackground() {
-      const isMobile = window.innerWidth <= 768;
-      const img = isMobile ? images[current].mobile : images[current].desktop;
-      slider.style.backgroundImage = `url(${img})`;
-    }
-  
     setInterval(() => {
       current = (current + 1) % images.length;
-      updateBackground();
+      slider.style.backgroundImage = `url(${images[current]})`;
     }, 2000);
-  
-    // Call on load and on resize
-    window.addEventListener('resize', updateBackground);
-    updateBackground();
   </script>
+  
   
 
 
