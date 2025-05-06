@@ -253,7 +253,7 @@ body {
 
 
 .new-launches-section {
-  background: url('images/curated1.png') no-repeat center center fixed;
+  
   background-size: cover;
   padding: 80px 20px;
   text-align: center;
@@ -634,45 +634,25 @@ body {
 }
 
 
-
-/* Mobile fix */
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll;
-    background-position: center top;
+    background: none; /* Remove desktop background */
   }
-}
-@media (max-width: 768px) {
-  body {
+
+  .section-container {
+    background: url('images/curatedmobile1.png') no-repeat center top scroll;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+    color: white;
   }
-}
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: url('images/curatedmobile1.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-}
-
-
-.section-bg {
-  background: url('images/curatedmobile1.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .section-bg {
-    background-attachment: scroll;
+  .section-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Optional overlay */
+    z-index: -1;
   }
 }
 
@@ -713,73 +693,89 @@ body {
     <a href="#men" class="btn-primary">Shop Now</a>
   </div>
 </section>
-  <!-- ✅ JS SLIDER SCRIPT 
-<script>
-  const images = [
-    "/images/curated1.png",
-    "/images/flora5.png",
-    "/images/flora3.png"
-  ];
-  let current = 0;
-  const slider = document.querySelector('.hero');
+ 
 
-  setInterval(() => {
-    current = (current + 1) % images.length;
-    slider.style.backgroundImage = `url(${images[current]})`;
-  }, 2000);
-</script>
--->
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const images = [
-        {
-          desktop: "/images/curated1.png",
-          mobile: "/images/curatedmobile1.png"
-        },
-        {
-          desktop: "/images/flora5.png",
-          mobile: "/images/floramobile2.png"
-        },
-        {
-          desktop: "/images/flora3.png",
-          mobile: "/images/floramobile3.png"
-        }
-      ];
-    
-      let current = 0;
-      const slider = document.querySelector('.hero');
-    
-      function updateBackground() {
-        if (!slider) return; // extra safety
-        const isMobile = window.innerWidth <= 768;
-        const img = isMobile ? images[current].mobile : images[current].desktop;
-        slider.style.backgroundImage = `url(${img})`;
+  document.addEventListener("DOMContentLoaded", function () {
+    const backgroundConfig = [
+      {
+        selector: ".hero",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" },
+          { desktop: "/images/flora5.png", mobile: "/images/floramobile5.png" },
+          { desktop: "/images/flora3.png", mobile: "/images/curated2.png" }
+        ]
+      },
+      {
+        selector: ".tshirt-container",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      {
+        selector: ".new-launches-section",
+        images: [
+          { desktop: "/images/flora5.png", mobile: "/images/floramobile2.png" }
+        ]
+      },
+      {
+        selector: ".curated-section",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      {
+        selector: ".best-sellers",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      {
+        selector: ".new-launches-section",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
       }
-    
-      setInterval(() => {
-        current = (current + 1) % images.length;
-        updateBackground();
-      }, 2000);
-    
-      window.addEventListener('resize', updateBackground);
-      updateBackground();
-    });
-  </script>
+    ];
+
+    let currentIndex = 0;
+
+    function updateAllBackgrounds() {
+      const isMobile = window.innerWidth <= 768;
+      backgroundConfig.forEach(section => {
+        const element = document.querySelector(section.selector);
+        if (!element) return;
+
+        const imageList = section.images;
+        const img = isMobile
+          ? imageList[currentIndex % imageList.length].mobile
+          : imageList[currentIndex % imageList.length].desktop;
+
+        element.style.backgroundImage = `url(${img})`;
+        element.style.backgroundSize = "cover";
+        element.style.backgroundRepeat = "no-repeat";
+        element.style.backgroundPosition = "center";
+        element.style.backgroundAttachment = "fixed";
+      });
+    }
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1);
+      updateAllBackgrounds();
+    }, 2000);
+
+    window.addEventListener("resize", updateAllBackgrounds);
+    updateAllBackgrounds();
+  });
+</script>
+
+
   
 
-  <section id="home" class="hero section-bg">
-    ...
-  </section>
-  
-  <section class="new-launches-section section-bg">
-    ...
-  </section>
-  
-  <section class="best-sellers section-bg">
-    ...
-  </section>
   
 
+  
 
   <!-- Curated Collection Section -->
   <section class="curated-section">
@@ -991,7 +987,22 @@ body {
     </div>
   </section>
   
+ <!-- ✅ JS SLIDER SCRIPT 
+<script>
+  const images = [
+    "/images/curated1.png",
+    "/images/flora5.png",
+    "/images/flora3.png"
+  ];
+  let current = 0;
+  const slider = document.querySelector('.hero');
 
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    slider.style.backgroundImage = `url(${images[current]})`;
+  }, 2000);
+</script>
+-->
 
   
 

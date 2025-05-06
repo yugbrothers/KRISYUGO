@@ -309,3 +309,27 @@
   <script src="/js/script.js"></script>
 </body>
 </html>
+     
+
+
+
+important <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tshirtSection = document.querySelector('.tshirt-container');
+
+    function updateTshirtBackground() {
+      if (!tshirtSection) return;
+      const isMobile = window.innerWidth <= 768;
+      tshirtSection.style.backgroundImage = isMobile 
+        ? "url('images/curatedmobile1.png')" 
+        : "url('images/curated1.png')";
+      tshirtSection.style.backgroundSize = "cover";
+      tshirtSection.style.backgroundRepeat = "no-repeat";
+      tshirtSection.style.backgroundAttachment = "fixed";
+      tshirtSection.style.backgroundPosition = "center";
+    }
+
+    window.addEventListener('resize', updateTshirtBackground);
+    updateTshirtBackground();
+  });
+</script>
