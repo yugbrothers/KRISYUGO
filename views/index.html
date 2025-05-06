@@ -16,97 +16,136 @@
 
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Josefin Sans', sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
 
-    .header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      z-index: 10;
-    }
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 10;
+}
 
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5em;
-      color: #fff;
-      letter-spacing: 1px;
-    }
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5em;
+  color: #fff;
+  letter-spacing: 1px;
+}
 
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-    .nav a:hover {
-      color: #ffd700;
-    }
+.nav a:hover {
+  color: #ffd700;
+}
 
-    .hero {
-      background: url('/images/yug1.png') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      position: relative;
-    }
-    .hero {
+.hero {
   background: url('/images/brother1.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
   transition: background-image 1s ease-in-out;
-    }
+}
 
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+}
 
-    .hero-content {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      border-radius: 10px;
-      max-width: 600px;
-    }
+.hero-content h1,
+.hero-content p {
+  font-family: 'Cormorant Garamond', serif;
+}
 
-    .hero-content h1,
-    .hero-content p {
-      font-family: 'Cormorant Garamond', serif;
-    }
+.hero-content h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
 
-    .hero-content h1 {
-      font-size: 3em;
-      font-weight: 700;
-    }
+.hero-content p {
+  font-size: 1.5em;
+  font-weight: 400;
+}
 
-    .hero-content p {
-      font-size: 1.5em;
-      font-weight: 400;
-    }
+.btn-primary {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: transparent;
+  color: #fff;
+  padding: 12px 28px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
 
-    .btn-primary {
-      font-family: 'Cormorant Garamond', serif;
-      background-color: transparent;
-      color: #fff;
-      padding: 12px 28px;
-      margin-top: 20px;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 30px;
-      border: 2px solid #fff;
-      transition: all 0.3s ease;
-    }
+.btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+}
 
-    .btn-primary:hover {
-      background-color: #fff;
-      color: #000;
-    }
+/* ✅ Mobile View */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 2em;
+  }
+
+  .nav a {
+    margin: 10px 0;
+    display: block;
+  }
+
+  .hero {
+    background-image: url('/images/curatedmobile1.png');
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .hero-content {
+    padding: 20px;
+    margin: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 1.2em;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+
 
     
 
@@ -532,29 +571,29 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Timeless Ethnic Wear</h1>
-    <p>Experience elegance with every thread</p>
-    <a href="#men" class="btn-primary">Shop Now</a>
-  </div>
-</section>
-  <!-- ✅ JS SLIDER SCRIPT -->
-<script>
-  const images = [
-    "/images/curated1.png",
-    "/images/flora5.png",
-    "/images/flora3.png"
-  ];
-  let current = 0;
-  const slider = document.querySelector('.hero');
-
-  setInterval(() => {
-    current = (current + 1) % images.length;
-    slider.style.backgroundImage = `url(${images[current]})`;
-  }, 2000);
-</script>
+  <script>
+    const isMobile = window.innerWidth <= 768;
+    const desktopImages = [
+      "/images/curated1.png",
+      "/images/flora5.png",
+      "/images/flora3.png"
+    ];
+    const mobileImages = [
+      "/images/curatedmobile1.png",
+      "/images/floramobile2.png",
+      "/images/floramobile3.png"
+    ];
+    const images = isMobile ? mobileImages : desktopImages;
+  
+    let current = 0;
+    const slider = document.querySelector('.hero');
+  
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      slider.style.backgroundImage = `url(${images[current]})`;
+    }, 2000);
+  </script>
+  
 
 
   <!-- Curated Collection Section -->
