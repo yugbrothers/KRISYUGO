@@ -15,45 +15,45 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Josefin Sans', sans-serif;
-    }
+ body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
 
-    .header {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      z-index: 10;
-    }
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 10;
+}
 
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5em;
-      color: #fff;
-      letter-spacing: 1px;
-    }
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5em;
+  color: #fff;
+  letter-spacing: 1px;
+}
 
-    .nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-    .nav a:hover {
-      color: #ffd700;
-    }
+.nav a:hover {
+  color: #ffd700;
+}
 
-    .hero {
+.hero {
   height: 100vh;
-  background: no-repeat center center/cover;
+  background: no-repeat center center / cover;
   transition: background-image 1s ease-in-out;
   display: flex;
   align-items: center;
@@ -61,20 +61,21 @@
   color: #fff;
   text-align: center;
   position: relative;
+  background-attachment: scroll; /* Fallback for mobile */
 }
 
-
-/* Mobile fix for iOS */
+/* ✅ Mobile-specific fix for iOS */
 @media (max-width: 768px) {
   .hero {
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: scroll; /* prevent iOS zoom bug */
+    max-height: -webkit-fill-available; /* iOS full height fix */
   }
 }
 
-    
 
 
     .hero-content {
@@ -762,7 +763,8 @@ body {
         element.style.backgroundSize = "cover";
         element.style.backgroundRepeat = "no-repeat";
         element.style.backgroundPosition = "center";
-        element.style.backgroundAttachment = "fixed";
+        element.style.backgroundAttachment = isMobile ? "scroll" : "fixed";
+
       });
     }
 
