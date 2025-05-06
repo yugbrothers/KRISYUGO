@@ -684,38 +684,40 @@ body {
 </script>
 -->
 <script>
-    const images = [
-      {
-        desktop: "/images/curated1.png",
-        mobile: "/images/curatedmobile1.png"
-      },
-      {
-        desktop: "/images/flora5.png",
-        mobile: "/images/floramobile2.png"
-      },
-      {
-        desktop: "/images/flora3.png",
-        mobile: "/images/floramobile3.png"
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = [
+        {
+          desktop: "/images/curated1.png",
+          mobile: "/images/curatedmobile1.png"
+        },
+        {
+          desktop: "/images/flora5.png",
+          mobile: "/images/floramobile2.png"
+        },
+        {
+          desktop: "/images/flora3.png",
+          mobile: "/images/floramobile3.png"
+        }
+      ];
+    
+      let current = 0;
+      const slider = document.querySelector('.hero');
+    
+      function updateBackground() {
+        if (!slider) return; // extra safety
+        const isMobile = window.innerWidth <= 768;
+        const img = isMobile ? images[current].mobile : images[current].desktop;
+        slider.style.backgroundImage = `url(${img})`;
       }
-    ];
-  
-    let current = 0;
-    const slider = document.querySelector('.hero');
-  
-    function updateBackground() {
-      const isMobile = window.innerWidth <= 768;
-      const img = isMobile ? images[current].mobile : images[current].desktop;
-      slider.style.backgroundImage = `url(${img})`;
-    }
-  
-    setInterval(() => {
-      current = (current + 1) % images.length;
+    
+      setInterval(() => {
+        current = (current + 1) % images.length;
+        updateBackground();
+      }, 2000);
+    
+      window.addEventListener('resize', updateBackground);
       updateBackground();
-    }, 2000);
-  
-    // Call on load and on resize
-    window.addEventListener('resize', updateBackground);
-    updateBackground();
+    });
   </script>
   
 
