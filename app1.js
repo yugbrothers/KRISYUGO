@@ -37,23 +37,24 @@ app.get('/newlaunch.html', (req, res) => {
 
 app.get('/people.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/people.html'));
-});
+})
 
 app.get('/work.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/work.html'));
-});
+})
 
 app.get('/collections.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/collections.html'));
-});
+})
 
 app.get('/blog.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/blog.html'));
-});
+})
 
 app.get('/careers.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/careers.html'));
-});
+})
+
 
 app.get('/checkout.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'views/checkout.html'));
@@ -72,7 +73,11 @@ app.use((req, res) => {
   res.status(404).send('404 - Page Not Found');
 });
 
-// ✅ FIX: Bind to 0.0.0.0 instead of localhost
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://0.0.0.0:${PORT}`);
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
+
+
