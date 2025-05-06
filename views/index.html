@@ -656,9 +656,24 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: url('images/curated1.png') no-repeat center center fixed;
+  background: url('images/curatedmobile1.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
+}
+
+
+.section-bg {
+  background: url('images/curatedmobile1.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .section-bg {
+    background-attachment: scroll;
+  }
 }
 
 
@@ -750,6 +765,19 @@ body {
       updateBackground();
     });
   </script>
+  
+
+  <section id="home" class="hero section-bg">
+    ...
+  </section>
+  
+  <section class="new-launches-section section-bg">
+    ...
+  </section>
+  
+  <section class="best-sellers section-bg">
+    ...
+  </section>
   
 
 
