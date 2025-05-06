@@ -265,18 +265,14 @@ body {
 
 
 .new-launches-section {
-  min-height: 100vh;
+  
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   padding: 80px 20px;
   text-align: center;
   overflow: hidden;
   position: relative;
-  z-index: 1;
+  height: 100vh;
 }
-
 
 .new-launches-heading h2 {
   font-size: 2.5em;
@@ -369,56 +365,7 @@ body {
 }
 
 
-/* Launch section with double class Desktop background for Festive Favourites */
-.festive-bg {
-  background-image: url('/images/curated1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 4rem 2rem; /* Optional: Adjust spacing */
-}
 
-/* Mobile override */
-@media (max-width: 768px) {
-  .festive-bg {
-    background-image: url('/images/curatedmobile1.png');
-  }
-}
-
-
-
-
-/* Double class with launch css Desktop background for New Product Launches */
-.launches-bg {
-  background-image: url('/images/curated1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 4rem 2rem;
-}
-
-/* Mobile background override */
-@media (max-width: 768px) {
-  .launches-bg {
-    background-image: url('/images/curatedmobile1.png');
-  }
-}
-
-
-/* Responsive background for Best Sellers section */
-.best-sellers-bg {
-  background-image: url('/images/curated1.jpg'); /* Desktop image */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Mobile override */
-@media (max-width: 768px) {
-  .best-sellers-bg {
-    background-image: url('/images/curatedmobile1.jpg');
-  }
-}
 
 
 
@@ -592,8 +539,15 @@ body {
   background-color: #6d3f3f;
 }
 
-/* Desktop background for curated section */
+/* Curated Section Base Styles */
 .curated-section {
+  background: linear-gradient(to right, #fffdf5, #f9f0e6);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Optional background only when curated-bg is present */
+.curated-bg {
   background-image: url('/images/curated1.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -602,29 +556,10 @@ body {
 
 /* Mobile background override */
 @media (max-width: 768px) {
-  .curated-section {
-    background-image: url('/images/curatedmobile1.png');
-  }
-}
-
-/* Desktop background */
-.curated-bg {
-  background-image: url('/images/curated1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Mobile override */
-@media (max-width: 768px) {
   .curated-bg {
     background-image: url('/images/curatedmobile1.png');
   }
 }
-
-
-
-
 
 
 
@@ -787,109 +722,87 @@ body {
       <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
     </nav>
   </header>
-<!-- Hero Section -->
+
+  <!-- Hero Section -->
 <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Timeless Ethnic Wear</h1>
-      <p>Experience elegance with every thread</p>
-      <a href="#men" class="btn-primary">Shop Now</a>
-    </div>
-  </section>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const backgroundConfig = [
-        {
-          selector: ".hero",
-          images: [
-            { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" },
-            { desktop: "/images/flora5.png", mobile: "/images/floramobile5.png" },
-            { desktop: "/images/flora3.png", mobile: "/images/curated2.png" }
-          ]
-        },
-        {
-          selector: ".tshirt-container",
-          images: [
-            { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
-          ]
-        },
-        {
-          selector: ".new-launches-section",
-          images: [
-            { desktop: "/images/flora5.png", mobile: "/images/curated8.png" }
-          ]
-        },
-        {
-          selector: ".curated-section",
-          images: [
-            { desktop: "/images/curated1.png", mobile: "/images/curated8.png" }
-          ]
-        },
-        {
-          selector: ".best-sellers",
-          images: [
-            { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
-          ]
-        },
+  <div class="hero-content">
+    <h1>Timeless Ethnic Wear</h1>
+    <p>Experience elegance with every thread</p>
+    <a href="#men" class="btn-primary">Shop Now</a>
+  </div>
+</section>
+ 
 
-        {
-          selector: ".new-launches-section.festive-bg",
-          images: [
-            { desktop: "/images/flora5.png", mobile: "/images/curated8.png" }
-          ]
-        },
-        
 
-        {
-          selector: ".new-launches-section.best-sellers-bg",
-          images: [
-            { desktop: "/images/flora5.png", mobile: "/images/curated8.png" }
-          ]
-        },
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const backgroundConfig = [
+      {
+        selector: ".hero",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" },
+          { desktop: "/images/flora5.png", mobile: "/images/floramobile5.png" },
+          { desktop: "/images/flora3.png", mobile: "/images/curated2.png" }
+        ]
+      },
+      {
+        selector: ".tshirt-container",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      {
+        selector: ".new-launches-section",
+        images: [
+          { desktop: "/images/flora5.png", mobile: "/images/floramobile2.png" }
+        ]
+      },
+      {
+        selector: ".curated-section",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      {
+        selector: ".best-sellers",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      
+    ];
 
-        {
-          selector: ".curated-section.curated-bg",
-          images: [
-            { desktop: "/images/curated1.png", mobile: "/images/curated8.png" }
-          ]
-        },
-      ];
-  
-      let currentIndex = 0;
-  
-      function updateAllBackgrounds() {
-        const isMobile = window.innerWidth <= 768;
-  
-        backgroundConfig.forEach(section => {
-          const element = document.querySelector(section.selector);
-          if (!element) return;
-  
-          const imageList = section.images;
-          const image = imageList[currentIndex % imageList.length];
-          const imageUrl = isMobile ? image.mobile : image.desktop;
-  
-          element.style.backgroundImage = `url(${imageUrl})`;
-          element.style.backgroundSize = "cover";
-          element.style.backgroundRepeat = "no-repeat";
-          element.style.backgroundPosition = "center";
-          element.style.backgroundAttachment = isMobile ? "scroll" : "fixed";
-        });
-      }
-  
-      // Initial load
+    let currentIndex = 0;
+
+    function updateAllBackgrounds() {
+      const isMobile = window.innerWidth <= 768;
+      backgroundConfig.forEach(section => {
+        const element = document.querySelector(section.selector);
+        if (!element) return;
+
+        const imageList = section.images;
+        const img = isMobile
+          ? imageList[currentIndex % imageList.length].mobile
+          : imageList[currentIndex % imageList.length].desktop;
+
+        element.style.backgroundImage = `url(${img})`;
+        element.style.backgroundSize = "cover";
+        element.style.backgroundRepeat = "no-repeat";
+        element.style.backgroundPosition = "center";
+        element.style.backgroundAttachment = isMobile ? "scroll" : "fixed";
+
+      });
+    }
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1);
       updateAllBackgrounds();
-  
-      // Update backgrounds every 7 seconds
-      setInterval(() => {
-        currentIndex++;
-        updateAllBackgrounds();
-      }, 7000);
-  
-      // Also update on resize
-      window.addEventListener("resize", updateAllBackgrounds);
-    });
-  </script>
-  
+    }, 2000);
+
+    window.addEventListener("resize", updateAllBackgrounds);
+    updateAllBackgrounds();
+  });
+</script>
 
 
   
@@ -962,7 +875,7 @@ body {
 </section>
 
 
-<div class="new-launches-section launches-bg">
+<div class="new-launches-section">
     <div class="new-launches-heading">
       <h2>New Product Launches</h2>
       <p>Discover the latest arrivals handpicked for you</p>
@@ -980,59 +893,66 @@ body {
     </div>
   </div>
   
-  
-  <section class="new-launches-section best-sellers-bg">
-  <div class="new-launches-heading">
-    <h2>Best Sellers</h2>
-    <p>Most loved pieces from our customers</p>
-  </div>
 
-  <div class="new-launches-slider">
+<section class="new-launches-section">
+  <h2 class="section-title">Best Sellers</h2>
+  <p class="section-subtitle">Most loved pieces from our customers</p>
+  <div class="launch-grid">
     <div class="launch-item">
       <img src="/images/curated1.png" alt="Best Seller 1">
+      <h3>Signature Kurta</h3>
+      <p>₹1399</p>
       <a href="#" class="btn-primary">Shop Now</a>
     </div>
     <div class="launch-item">
       <img src="/images/best2.png" alt="Best Seller 2">
+      <h3>Festive Sherwani</h3>
+      <p>₹2499</p>
       <a href="#" class="btn-primary">Shop Now</a>
     </div>
     <div class="launch-item">
       <img src="/images/best3.png" alt="Best Seller 3">
+      <h3>Elegant Anarkali</h3>
+      <p>₹1899</p>
       <a href="#" class="btn-primary">Shop Now</a>
     </div>
   </div>
+
+
 </section>
 
-
-<section class="new-launches-section festive-bg">
-  <div class="new-launches-heading">
-    <h2>Festive Favourites</h2>
-    <p>Celebrate in style with our top picks for the festive season.</p>
-  </div>
-
-  <div class="new-launches-slider">
-    <div class="launch-item">
-      <img src="/images/flora12.png" alt="Festive Product 1" />
-      <a href="/festive.html" class="btn-primary">Shop Now</a>
+<!-- Festive Favourites Section -->
+<section class="new-launches-section">
+    <div class="new-launches-heading">
+      <h2>Festive Favourites</h2>
+      <p>Celebrate in style with our top picks for the festive season.</p>
     </div>
-    <div class="launch-item">
-      <img src="/images/tanmay1.png" alt="Festive Product 2" />
-      <a href="/festive.html" class="btn-primary">Shop Now</a>
+  
+    <div class="new-launches-slider">
+      <div class="launch-item">
+        <img src="/images/flora12.png" alt="Festive Product 1" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
+      <div class="launch-item">
+        <img src="/images/tanmay1.png" alt="Festive Product 2" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
+      <div class="launch-item">
+        <img src="/images/tanmay2.png" alt="Festive Product 3" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
+      <div class="launch-item">
+        <img src="/images/tanmay3.png" alt="Festive Product 4" />
+        <a href="/festive.html" class="btn-primary">Shop Now</a>
+      </div>
     </div>
-    <div class="launch-item">
-      <img src="/images/tanmay2.png" alt="Festive Product 3" />
-      <a href="/festive.html" class="btn-primary">Shop Now</a>
-    </div>
-    <div class="launch-item">
-      <img src="/images/tanmay3.png" alt="Festive Product 4" />
-      <a href="/festive.html" class="btn-primary">Shop Now</a>
-    </div>
-  </div>
-</section>
+   
+  </section>
 
+  
 
-
-<section class="curated-section curated-bg">
+  <!-- Curated Collection Section -->
+<section class="curated-section">
     <div class="curated-heading">
       <h2>Curated Collection</h2>
       <p>Handpicked styles just for you</p>
@@ -1062,15 +982,6 @@ body {
       </div>
     </div>
   </section>
-  
-
-
-
-  
-
-  
-  
-  
   
   
   
@@ -1110,7 +1021,22 @@ body {
     </div>
   </section>
   
+ <!-- ✅ JS SLIDER SCRIPT 
+<script>
+  const images = [
+    "/images/curated1.png",
+    "/images/flora5.png",
+    "/images/flora3.png"
+  ];
+  let current = 0;
+  const slider = document.querySelector('.hero');
 
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    slider.style.backgroundImage = `url(${images[current]})`;
+  }, 2000);
+</script>
+-->
 
   
 
@@ -1122,8 +1048,24 @@ body {
  
   
 
+<!-- Other content above -->
 
-
+<!-- Auto-scroll script for new launches 
+<script>
+    const launchSlider = document.querySelector('.new-launches-slider');
+    let scrollTop = 0;
+    setInterval(() => {
+      scrollTop += 1;
+      launchSlider.scrollTo({
+        top: scrollTop,
+        behavior: 'smooth'
+      });
+      if (scrollTop >= launchSlider.scrollHeight - launchSlider.clientHeight) {
+        scrollTop = 0;
+      }
+    }, 50);
+  </script>
+-->
 
 <!-- Auto-scroll script for new launches
   <script>
