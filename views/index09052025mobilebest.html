@@ -15,74 +15,52 @@
   <link rel="stylesheet" href="/styles/style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-
-
   <style>
- @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Dancing+Script:wght@500&family=Josefin+Sans:wght@400;600&display=swap');
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Josefin Sans', sans-serif;
+    }
 
-/* ===========================
-   Global Reset & Base Styles
-   =========================== */
+    .header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5em;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffd700;
+    }
+
+/* GLOBAL */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
-  color: white;
-  background-color: #000;
+  font-size: 16px; /* Base font size */
 }
 
-/* =================
-   Header & Branding
-   ================= */
-.header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding: 20px 40px;
-  z-index: 10;
-}
-
-.logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5em;
-  color: #fff;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
-.logo .devanagari {
-  font-family: 'Dancing Script', cursive;
-  color: gold;
-}
-
-/* ==========
-   Navigation
-   ========== */
-.nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: #ffd700;
-}
-
-/* ===============
-   Hero Section
-   =============== */
+/* HERO SECTION */
 .hero {
   background: url('/images/brother1.png') no-repeat center center/cover;
   height: 100vh;
@@ -108,7 +86,7 @@ body, html {
 }
 
 .hero-content h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 3.5rem); /* Responsive font size */
   font-weight: 700;
 }
 
@@ -117,9 +95,7 @@ body, html {
   font-weight: 400;
 }
 
-/* ===============
-   Primary Button
-   =============== */
+/* BUTTONS */
 .btn-primary {
   font-family: 'Cormorant Garamond', serif;
   background-color: transparent;
@@ -139,84 +115,135 @@ body, html {
   color: #000;
 }
 
-/* ===============
-   Responsive Layout
-   =============== */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .hero {
     background-attachment: scroll;
   }
 
-  .header {
-    grid-template-columns: 1fr;
-    text-align: center;
+  body {
+    background: url('/images/curatedmobile1.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  .menu-btn {
+    font-size: 1.5em;
   }
 
   .logo {
     font-size: 2em;
-    margin-bottom: 10px;
   }
 
-  .nav {
-    flex-direction: column;
-    align-items: center;
-    padding-right: 0;
-  }
-
-  .btn-primary {
-    font-size: 0.9rem;
+  .logo-image img {
+    max-width: 80%;
   }
 }
 
 
-/* Fullscreen overlay nav  for sidebar */
 
-
-
-.overlay-menu {
-  height: 100%;
-  width: 0;
+.sidebar {
   position: fixed;
-  z-index: 9999;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.97);
-  overflow-x: hidden;
-  transition: 0.6s ease;
-}
-
-.overlay-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-}
-
-.overlay-content a {
-  padding: 16px;
-  text-decoration: none;
-  font-size: 2rem;
-  display: block;
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/sidebar-bg.jpg') no-repeat center center/cover;
   color: white;
-  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-logo {
+  font-size: 2.5rem;
   font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 40px;
 }
 
-.overlay-content a:hover {
-  color: gold;
-}
-
-.close-overlay {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 3rem;
+.sidebar-nav a {
   color: white;
   text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
+  margin-bottom: 18px;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
+
+.sidebar-nav a:hover {
+  color: #ffd700;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.sidebar.open + .sidebar-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  z-index: 1001;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Show on mobile */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  body.sidebar-open {
+    overflow: hidden;
+  }
+}
+
+/* Desktop spacing */
+@media (min-width: 769px) {
+  .sidebar {
+    transform: translateX(0);
+    position: fixed;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  body {
+    padding-left: 260px;
+  }
+}
+
+
 
 
 
@@ -361,92 +388,6 @@ body {
     background-size: cover;
     background-attachment: scroll;
   }
-}
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Dancing+Script:wght@500&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  background-color: #111;
-  color: white;
-  overflow-x: hidden;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 1100;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fff;
-  padding: 20px 30px;
-  z-index: 1101;
-  position: relative;
-}
-
-.logo .devanagari {
-  font-family: 'Dancing Script', cursive;
-  color: gold;
-}
-
-.sidebar-alt {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  overflow-x: hidden;
-  transition: width 0.5s ease;
-  z-index: 1000;
-  padding-top: 60px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
-}
-
-.sidebar-alt.open {
-  width: 280px;
-}
-
-.closebtn-alt {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 36px;
-  color: white;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-.sidebar-nav-alt {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 0 30px;
-}
-
-.sidebar-nav-alt a {
-  color: #fff;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.3s ease;
-  font-weight: 400;
-}
-
-.sidebar-nav-alt a:hover {
-  color: gold;
-  font-weight: 600;
 }
 
 
@@ -1211,85 +1152,81 @@ body {
   }
 }
 
-</style>
+
+
+
+
+
+  </style>
 </head>
 <body>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Timeless Ethnic Wear</h1>
-    <p>Experience elegance with every thread</p>
-    <a href="#men" class="btn-primary">Shop Now</a>
-  </div>
+  <!-- Slide Toggle Button -->
+<button id="menu-toggle" class="menu-btn">
+  <i class="fas fa-bars"></i>
+</button>
 
-
-</section>
-
-<!-- Header -->
-<header class="header">
-  <div class="logo" id="logo-trigger">
-    KRI<span class="devanagari">स</span>YUG
-  </div>
+<!-- Slide-In Menu -->
+<header class="header" id="header">
+  <div class="logo">KRI<span class="devanagari">स</span>YUG</div>
 
   <nav class="nav">
-    <!-- Main Sections -->
     <a href="#home">Home</a>
     <a href="#men">Men</a>
     <a href="#about">About</a>
     <a href="/collections.html">Collections</a>
     <a href="#testimonials">Testimonials</a>
-
-    <!-- Additional Pages -->
     <a href="/people.html">People</a>
-    <a href="/work.html">Work</a>
     <a href="/blog.html">Blog</a>
     <a href="/careers.html">Careers</a>
-
-    <!-- User Actions -->
+    <a href="/work.html">Work</a>
     <a href="#contact">Contact</a>
     <a href="/signin.html">Sign In</a>
     <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
   </nav>
+
+  <div class="logo-svg">
+    <svg width="200" height="60" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="60" font-family="'Cormorant Garamond', serif" font-size="48" fill="white">KRI</text>
+      <text x="90" y="60" font-family="'Dancing Script', cursive" font-size="48" fill="gold">स</text>
+      <text x="135" y="60" font-family="'Cormorant Garamond', serif" font-size="48" fill="white">YUG</text>
+    </svg>
+  </div>
+
 </header>
 
+<!-- Sidebar -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-logo">KRI<span class="devanagari">स</span>YUG</div>
+    <nav class="sidebar-nav">
+      <a href="#home">Home</a>
+      <a href="#men">Men</a>
+      <a href="#about">About</a>
+      <a href="/collections.html">Collections</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="/people.html">People</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/careers.html">Careers</a>
+      <a href="/work.html">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="/signin.html">Sign In</a>
+      <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+  </aside>
+  
+  <!-- Overlay for closing sidebar -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  
+  
 
-
-
-<!-- Full-screen Overlay Menu -->
-<div id="overlay-menu" class="overlay-menu">
-  <a href="javascript:void(0)" class="close-overlay" id="close-overlay">&times;</a>
-  <div class="overlay-content">
-    <a href="/">Home</a>
-    <a href="/mens.html">Men</a>
-    <a href="/women.html">Women</a>
-    <a href="/collections.html">Collections</a>
-    <a href="/people.html">People</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/careers.html">Careers</a>
-    <a href="/work.html">Work</a>
-    <a href="/signin.html">Sign In</a>
-    <a href="/cart.html">Cart</a>
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Timeless Ethnic Wear</h1>
+    <p>Experience elegance with every thread</p>
+    <a href="#men" class="btn-primary">Shop Now</a>
   </div>
-</div>
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-  
+</section>
 
   <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -1413,37 +1350,92 @@ body {
   });
 </script>
 
-
-
-
-
-
-
   
 
 
-
- 
   
-  
-
-
-
 <script>
-  const logo = document.getElementById('logo-trigger');
-  const overlay = document.getElementById('overlay-menu');
-  const closeBtn = document.getElementById('close-overlay');
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebar-overlay");
+    const navLinks = document.querySelectorAll(".sidebar-nav a");
+  
+    function openSidebar() {
+      sidebar.classList.add("open");
+      document.body.classList.add("sidebar-open");
+    }
+  
+    function closeSidebar() {
+      sidebar.classList.remove("open");
+      document.body.classList.remove("sidebar-open");
+    }
+  
+    // Toggle on hamburger click
+    menuToggle.addEventListener("click", function () {
+      if (sidebar.classList.contains("open")) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
+    });
+  
+    // Close when clicking outside (overlay)
+    overlay.addEventListener("click", closeSidebar);
+  
+    // Close sidebar when any nav link is clicked (on mobile only)
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          closeSidebar();
+        }
+      });
+    });
+  </script>
+  
 
-  logo.addEventListener('click', () => {
-    overlay.style.width = "100%";
-  });
 
-  closeBtn.addEventListener('click', () => {
-    overlay.style.width = "0";
-  });
-</script>
 
   
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebar-overlay");
+      const navLinks = document.querySelectorAll(".sidebar-nav a");
+  
+      function openSidebar() {
+        sidebar.classList.add("open");
+        document.body.classList.add("sidebar-open");
+      }
+  
+      function closeSidebar() {
+        sidebar.classList.remove("open");
+        document.body.classList.remove("sidebar-open");
+      }
+  
+      menuToggle.addEventListener("click", function () {
+        if (sidebar.classList.contains("open")) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+  
+      overlay.addEventListener("click", closeSidebar);
+  
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            closeSidebar();
+          }
+        });
+      });
+    });
+  </script>
+  
+  
+
   
 
 <script>
