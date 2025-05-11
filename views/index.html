@@ -706,106 +706,70 @@ body {
   background: #333;
 }
 
-/* Curated Section */
-.curated-section {
-  background: linear-gradient(to right, #fffdf5, #f9f0e6);
-  padding: 100px 20px;
+.curated-scroll-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.curated-scroll-section .section-title h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  color: #111;
+}
+
+.curated-scroll-section .section-title p {
+  color: #555;
+  margin-bottom: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.curated-scroll-wrapper {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.curated-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.curated-item {
+  flex: 0 0 auto;
+  width: 240px;
   text-align: center;
 }
 
-.curated-heading h2 {
-  font-size: 2.8em;
-  font-family: 'Dancing Script', cursive;
-  margin-bottom: 10px;
-  color: #4b2e2e;
-}
-
-.curated-heading p {
-  font-size: 1.2em;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #6b4b3e;
-  margin-bottom: 50px;
-}
-
-.curated-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.curated-card {
-  background-color: #ffffff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.curated-card:hover {
-  transform: translateY(-10px);
-}
-
-.curated-card img {
+.curated-item img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-.card-info {
-  padding: 20px;
+.curated-item:hover img {
+  transform: scale(1.05);
 }
 
-.card-info h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+.curated-item h4 {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-family: 'Cormorant Garamond', serif;
   color: #333;
-  font-family: 'Roboto', sans-serif;
 }
 
-.btn-secondary {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4b2e2e;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.btn-secondary:hover {
-  background-color: #6d3f3f;
-}
-
-/* Desktop background for curated section */
-.curated-section {
-  background-image: url('/images/curated1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Mobile background override */
+/* Optional: Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
-  .curated-section {
-    background-image: url('/images/curatedmobile1.png');
+  .curated-item {
+    width: 60vw;
   }
-}
 
-/* Desktop background */
-.curated-bg {
-  background-image: url('/images/curated1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Mobile override */
-@media (max-width: 768px) {
-  .curated-bg {
-    background-image: url('/images/curatedmobile1.png');
+  .curated-item img {
+    height: 320px;
   }
 }
 
@@ -1597,7 +1561,227 @@ img {
 }
 
 
+/* SIGNATURE PICKS - Horizontal Scroll */
+#signature-picks .scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
 
+#signature-picks .scroll-container {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.product-card-horizontal {
+  flex: 0 0 300px;
+  background: #fafafa;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card-horizontal:hover {
+  transform: translateY(-8px);
+}
+
+.product-card-horizontal .product-img {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card-horizontal .product-img img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.product-card-horizontal .product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card-horizontal .product-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-card-horizontal .product-price {
+  font-weight: 600;
+  color: #b8860b;
+  font-size: 1.1rem;
+}
+
+.product-card-horizontal .product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #b8860b;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+}
+
+/* Scrollbar styling (optional) */
+#signature-picks .scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+#signature-picks .scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #b8860b;
+  border-radius: 10px;
+}
+
+
+
+#curated-collection .section-title h2 {
+  color: #4a2f21;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.scroll-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.scroll-row {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding-bottom: 10px;
+}
+
+.wide-product-card {
+  min-width: 48vw; /* Show 2 per full screen */
+  height: 70vh;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: #fafafa;
+  transition: transform 0.3s ease;
+}
+
+.wide-product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.info-overlay h5 {
+  font-size: 1.5rem;
+  color: #4a2f21;
+  margin-bottom: 5px;
+}
+
+.info-overlay p {
+  color: #b8860b;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Hide scrollbar */
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#showcase-collection .section-title h2 {
+  color: #4a2f21;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.showcase-scroll-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.showcase-scroll-row {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding-bottom: 10px;
+}
+
+.showcase-product-card {
+  min-width: 48vw; /* Two at a time */
+  height: 70vh;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: #fafafa;
+  transition: transform 0.3s ease;
+}
+
+.showcase-product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.info-overlay h5 {
+  font-size: 1.5rem;
+  color: #4a2f21;
+  margin-bottom: 5px;
+}
+
+.info-overlay p {
+  color: #b8860b;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.showcase-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.showcase-scroll-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 
 </style>
@@ -1851,7 +2035,347 @@ img {
   });
 </script>
 
+
+
+
+
+<!-- New Arrivals -->
+    <section class="py-5" id="collection">
+        <div class="container">
+            <div class="section-title">
+                <h2>New Arrivals</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated2.png" alt="Gray Shirt">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Gray Shirt</h5>
+                            <p class="product-price">$945.50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated7.png" alt="Pants">
+                            <span class="product-badge">Sale</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Women's Pants</h5>
+                            <p class="product-price">$925.50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated8.png" alt="Polo Shirt">
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Polo Shirt</h5>
+                            <p class="product-price">$935.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated11.png" alt="Girl Shirt">
+                            <span class="product-badge">Popular</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Girl's Shirt</h5>
+                            <p class="product-price">$1045.50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner" style="background-image: url('Images/mor.jpg');">
+        <div class="container">
+            <div class="banner-content">
+                <h2 class="banner-title">Summer Essentials</h2>
+                <p>Our dresses are designed to make you feel confident and stylish. They feature classical detailing in a range of colors.</p>
+                <button class="btn shop-btn mt-3">VIEW COLLECTION</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- New Launches Section -->
+<section class="new-launches-section">
+  <div class="new-launches-heading">
+    <h2>New Launches</h2>
+    <p>Explore our latest ethnic wear crafted for elegance and grace.</p>
+  </div>
+
+  <div class="new-launches-slider">
+    <div class="launch-item">
+      <img src="/images/flora5.png" alt="New Product 1" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora2.png" alt="New Product 2" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora3.png" alt="New Product 3" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora4.png" alt="New Product 4" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+
+
+<!-- Signature Picks -->
+<section class="py-5" id="signature-picks">
+  <div class="container">
+    <div class="section-title">
+      <h2>Signature Picks</h2>
+    </div>
+    <div class="scroll-wrapper">
+      <div class="scroll-container">
+        <div class="product-card-horizontal">
+          <div class="product-img">
+            <img src="Images/boss1.png" alt="Turtle Neck">
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Turtle Neck</h5>
+            <p class="product-price">$935.50</p>
+          </div>
+        </div>
+        <div class="product-card-horizontal">
+          <div class="product-img">
+            <img src="Images/crazy10.png" alt="Kurta">
+            <span class="product-badge">-20%</span>
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Kurta</h5>
+            <p class="product-price">$1045.50</p>
+          </div>
+        </div>
+        <div class="product-card-horizontal">
+          <div class="product-img">
+            <img src="Images/flora5.png" alt="Denim & Jeans">
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Denim & Jeans</h5>
+            <p class="product-price">$1265.50</p>
+          </div>
+        </div>
+        <div class="product-card-horizontal">
+          <div class="product-img">
+            <img src="Images/lady1.png" alt="Long Skirt">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Long Skirt</h5>
+            <p class="product-price">$955.50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Showcase Collection with Auto Slide -->
+<section class="py-5" id="showcase-collection">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h2>Showcase Collection</h2>
+    </div>
+    <div class="showcase-scroll-wrapper">
+      <div class="showcase-scroll-row" id="showcase-scroll-row">
+        <div class="showcase-product-card">
+          <img src="Images/boss1.png" alt="Turtle Neck">
+          <div class="info-overlay">
+            <h5>Turtle Neck</h5>
+            <p>$935.50</p>
+          </div>
+        </div>
+        <div class="showcase-product-card">
+          <img src="Images/crazy10.png" alt="Kurta">
+          <div class="info-overlay">
+            <h5>Kurta</h5>
+            <p>$1045.50</p>
+          </div>
+        </div>
+        <div class="showcase-product-card">
+          <img src="Images/flora5.png" alt="Denim & Jeans">
+          <div class="info-overlay">
+            <h5>Denim & Jeans</h5>
+            <p>$1265.50</p>
+          </div>
+        </div>
+        <div class="showcase-product-card">
+          <img src="Images/lady1.png" alt="Long Skirt">
+          <div class="info-overlay">
+            <h5>Long Skirt</h5>
+            <p>$955.50</p>
+          </div>
+        </div>
+        <div class="showcase-product-card">
+          <img src="Images/curated11.png" alt="Bonus Product">
+          <div class="info-overlay">
+            <h5>Bonus Product</h5>
+            <p>$999.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Special Collection -->
+<section class="py-5" id="specials">
+  <div class="container">
+    <div class="section-title">
+      <h2>Special Collection</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/boss1.png" alt="Turtle Neck">
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Turtle Neck</h5>
+            <p class="product-price">$935.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/crazy10.png" alt="Kurta">
+            <span class="product-badge">-20%</span>
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Kurta</h5>
+            <p class="product-price">$1045.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/flora5.png" alt="Denim & Jeans">
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Denim & Jeans</h5>
+            <p class="product-price">$1265.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/lady1.png" alt="Long Skirt">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Long Skirt</h5>
+            <p class="product-price">$955.50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Curated Collection (New Arrivals Reworked) -->
+<section class="py-5" id="curated-collection">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h2>Curated Collection</h2>
+    </div>
+    <div class="scroll-wrapper">
+      <div class="scroll-row">
+        <div class="wide-product-card">
+          <img src="Images/curated2.png" alt="Gray Shirt">
+          <div class="info-overlay">
+            <h5>Gray Shirt</h5>
+            <p>$945.50</p>
+          </div>
+        </div>
+        <div class="wide-product-card">
+          <img src="Images/curated7.png" alt="Women's Pants">
+          <div class="info-overlay">
+            <h5>Women's Pants</h5>
+            <p>$925.50</p>
+          </div>
+        </div>
+        <div class="wide-product-card">
+          <img src="Images/curated8.png" alt="Polo Shirt">
+          <div class="info-overlay">
+            <h5>Polo Shirt</h5>
+            <p>$935.00</p>
+          </div>
+        </div>
+        <div class="wide-product-card">
+          <img src="Images/curated11.png" alt="Girl's Shirt">
+          <div class="info-overlay">
+            <h5>Girl's Shirt</h5>
+            <p>$1045.50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Curated Collection Section -->
+<section class="curated-scroll-section">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Curated Collection</h2>
+      <p>Exclusive designs selected for refined tastes</p>
+    </div>
+    <div class="curated-scroll-wrapper">
+      <div class="curated-item">
+        <img src="/images/curated1.png" alt="Modern Saree" />
+        <h4>Modern Saree</h4>
+      </div>
+      <div class="curated-item">
+        <img src="/images/flora12.png" alt="Floral Grace" />
+        <h4>Floral Grace</h4>
+      </div>
+      <div class="curated-item">
+        <img src="/images/tanmay1.png" alt="Festive Kurta" />
+        <h4>Festive Kurta</h4>
+      </div>
+      <div class="curated-item">
+        <img src="/images/curated4.png" alt="Minimal Drape" />
+        <h4>Minimal Drape</h4>
+      </div>
+      <div class="curated-item">
+        <img src="/images/flora5.png" alt="Elegance Redefined" />
+        <h4>Elegance Redefined</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
   
+
 
  <!-- Luxury Edit Section -->
  <section class="luxury-edit-section">
@@ -1900,37 +2424,6 @@ img {
 </section>
   
 
-  <!-- Curated Collection Section -->
-  <section class="curated-section">
-    <div class="curated-heading">
-      <h2>Curated Collection</h2>
-      <p>Handpicked styles just for you</p>
-    </div>
-  
-    <div class="curated-grid">
-      <div class="curated-card">
-        <img src="/images/flora12.png" alt="Curated Look 1">
-        <div class="card-info">
-          <h3>Elegant Kurti</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-      <div class="curated-card">
-        <img src="/images/tanmay1.png" alt="Curated Look 2">
-        <div class="card-info">
-          <h3>Bold Festive Wear</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-      <div class="curated-card">
-        <img src="/images/curated1.png" alt="Curated Look 3">
-        <div class="card-info">
-          <h3>Modern Saree</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-    </div>
-  </section>
   
   <!-- New Launches Section -->
 <section class="new-launches-section">
@@ -2034,92 +2527,7 @@ img {
 
 
 
-<section class="curated-section curated-bg">
-    <div class="curated-heading">
-      <h2>Curated Collection</h2>
-      <p>Handpicked styles just for you</p>
-    </div>
-  
-    <div class="curated-grid">
-      <div class="curated-card">
-        <img src="/images/flora12.png" alt="Curated Look 1">
-        <div class="card-info">
-          <h3>Elegant Kurti</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-      <div class="curated-card">
-        <img src="/images/tanmay1.png" alt="Curated Look 2">
-        <div class="card-info">
-          <h3>Bold Festive Wear</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-      <div class="curated-card">
-        <img src="/images/curated1.png" alt="Curated Look 3">
-        <div class="card-info">
-          <h3>Modern Saree</h3>
-          <a href="/curated.html" class="btn-secondary">View More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-<!-- Signature Edit Section -->
-<section class="signature-edit-section" data-aos="fade-up">
-  <div class="signature-heading">
-    <h2>Signature Edit</h2>
-    <p>Crafted styles that define elegance</p>
-  </div>
-
-  <div class="swiper signature-grid">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="signature-card" data-aos="zoom-in">
-          <img src="/images/flora12.png" alt="Elegant Kurti" class="signature-img" />
-          <div class="overlay">
-            <div class="overlay-content">
-              <h3>Elegant Kurti</h3>
-              <p>Graceful embroidery with modern flair</p>
-              <a href="/curated.html" class="explore-btn">Explore</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="signature-card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="/images/tanmay1.png" alt="Bold Festive Wear" class="signature-img" />
-          <div class="overlay">
-            <div class="overlay-content">
-              <h3>Bold Festive Wear</h3>
-              <p>Make a statement this season</p>
-              <a href="/curated.html" class="explore-btn">Explore</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="signature-card" data-aos="zoom-in" data-aos-delay="200">
-          <img src="/images/curated1.png" alt="Modern Saree" class="signature-img" />
-          <div class="overlay">
-            <div class="overlay-content">
-              <h3>Modern Saree</h3>
-              <p>Tradition meets trend</p>
-              <a href="/curated.html" class="explore-btn">Explore</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pagination for mobile carousel -->
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-  
+ 
   
 
   
@@ -2199,132 +2607,6 @@ img {
 </script>
 -->
 
-<!-- New Arrivals -->
-    <section class="py-5" id="collection">
-        <div class="container">
-            <div class="section-title">
-                <h2>New Arrivals</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="Images/curated2.png" alt="Gray Shirt">
-                            <span class="product-badge">New</span>
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Gray Shirt</h5>
-                            <p class="product-price">$945.50</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="Images/curated7.png" alt="Pants">
-                            <span class="product-badge">Sale</span>
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Women's Pants</h5>
-                            <p class="product-price">$925.50</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="Images/curated8.png" alt="Polo Shirt">
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Polo Shirt</h5>
-                            <p class="product-price">$935.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="Images/curated11.png" alt="Girl Shirt">
-                            <span class="product-badge">Popular</span>
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title">Girl's Shirt</h5>
-                            <p class="product-price">$1045.50</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Collection Banner -->
-    <section class="collection-banner" style="background-image: url('Images/mor.jpg');">
-        <div class="container">
-            <div class="banner-content">
-                <h2 class="banner-title">Summer Essentials</h2>
-                <p>Our dresses are designed to make you feel confident and stylish. They feature classical detailing in a range of colors.</p>
-                <button class="btn shop-btn mt-3">VIEW COLLECTION</button>
-            </div>
-        </div>
-    </section>
-
-
-<!-- Special Collection -->
-<section class="py-5" id="specials">
-  <div class="container">
-    <div class="section-title">
-      <h2>Special Collection</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-3">
-        <div class="product-card">
-          <div class="product-img">
-            <img src="Images/boss1.png" alt="Turtle Neck">
-          </div>
-          <div class="product-info">
-            <h5 class="product-title">Turtle Neck</h5>
-            <p class="product-price">$935.50</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="product-card">
-          <div class="product-img">
-            <img src="Images/crazy10.png" alt="Kurta">
-            <span class="product-badge">-20%</span>
-          </div>
-          <div class="product-info">
-            <h5 class="product-title">Kurta</h5>
-            <p class="product-price">$1045.50</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="product-card">
-          <div class="product-img">
-            <img src="Images/flora5.png" alt="Denim & Jeans">
-          </div>
-          <div class="product-info">
-            <h5 class="product-title">Denim & Jeans</h5>
-            <p class="product-price">$1265.50</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="product-card">
-          <div class="product-img">
-            <img src="Images/lady1.png" alt="Long Skirt">
-            <span class="product-badge">New</span>
-          </div>
-          <div class="product-info">
-            <h5 class="product-title">Long Skirt</h5>
-            <p class="product-price">$955.50</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- About Us -->
 <section class="py-5 bg-light" id="aboutus">
