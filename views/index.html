@@ -1211,6 +1211,395 @@ body {
   }
 }
 
+
+
+/* === KRISYUG Special Collection, About, Blog, Newsletter, Footer Styles === */
+/* New Arrivals Section */
+#collection {
+  background-color: #fdfcfa;
+  padding: 60px 0;
+}
+
+.section-title h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #222;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #b8860b;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  color: #b8860b;
+  font-weight: bold;
+}
+
+/* Collection Banner */
+.collection-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.collection-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.banner-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 1.1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.shop-btn {
+  padding: 12px 28px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.shop-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Dancing+Script:wght@600&family=Josefin+Sans:wght@400;600&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Josefin Sans', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4a2f21;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background: #b8860b;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  background: #fafafa;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-img {
+  position: relative;
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #b8860b;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-price {
+  font-weight: 600;
+  color: #b8860b;
+  font-size: 1.1rem;
+}
+
+/* ABOUT US */
+#aboutus h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #4a2f21;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+#aboutus p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.shop-btn {
+  background: #4a2f21;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.shop-btn:hover {
+  background: #b8860b;
+}
+
+/* BLOG SECTION */
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: #4a2f21;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card a {
+  color: #4a2f21;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: #b8860b;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+  background: #4a2f21;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-input {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.newsletter-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  font-size: 1rem;
+}
+
+.newsletter-input button {
+  padding: 10px 20px;
+  background: #b8860b;
+  color: white;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newsletter-input button:hover {
+  background: #fff;
+  color: #4a2f21;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: #ccc;
+  padding: 60px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-title {
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+  color: #b8860b;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+  color: #b8860b;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-input {
+    flex-direction: column;
+  }
+
+  .newsletter-input input,
+  .newsletter-input button {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -1809,8 +2198,249 @@ body {
   }, 50);
 </script>
 -->
-  
-  
+
+<!-- New Arrivals -->
+    <section class="py-5" id="collection">
+        <div class="container">
+            <div class="section-title">
+                <h2>New Arrivals</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated2.png" alt="Gray Shirt">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Gray Shirt</h5>
+                            <p class="product-price">$945.50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated7.png" alt="Pants">
+                            <span class="product-badge">Sale</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Women's Pants</h5>
+                            <p class="product-price">$925.50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated8.png" alt="Polo Shirt">
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Polo Shirt</h5>
+                            <p class="product-price">$935.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="Images/curated11.png" alt="Girl Shirt">
+                            <span class="product-badge">Popular</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-title">Girl's Shirt</h5>
+                            <p class="product-price">$1045.50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Banner -->
+    <section class="collection-banner" style="background-image: url('Images/mor.jpg');">
+        <div class="container">
+            <div class="banner-content">
+                <h2 class="banner-title">Summer Essentials</h2>
+                <p>Our dresses are designed to make you feel confident and stylish. They feature classical detailing in a range of colors.</p>
+                <button class="btn shop-btn mt-3">VIEW COLLECTION</button>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Special Collection -->
+<section class="py-5" id="specials">
+  <div class="container">
+    <div class="section-title">
+      <h2>Special Collection</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/boss1.png" alt="Turtle Neck">
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Turtle Neck</h5>
+            <p class="product-price">$935.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/crazy10.png" alt="Kurta">
+            <span class="product-badge">-20%</span>
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Kurta</h5>
+            <p class="product-price">$1045.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/flora5.png" alt="Denim & Jeans">
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Denim & Jeans</h5>
+            <p class="product-price">$1265.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="product-card">
+          <div class="product-img">
+            <img src="Images/lady1.png" alt="Long Skirt">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h5 class="product-title">Long Skirt</h5>
+            <p class="product-price">$955.50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us -->
+<section class="py-5 bg-light" id="aboutus">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="Images/flora2.png" alt="About Us" class="img-fluid">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="mb-4">About KRISYUG</h2>
+        <p>KRISYUG is rooted in timeless Indian tradition. Our designs pay homage to centuries-old craftsmanship and textiles that have adorned the people of the subcontinent. Each piece is inspired by rituals, festivals, and daily elegance woven into Indian life. This tradition, reimagined with contemporary form, is what sets us apart.</p>
+        <p>We don’t follow trends; we revive stories. From temple silhouettes to artisanal weaves, KRISYUG stands for authenticity and heritage that is richer than fashion itself.</p>
+        <button class="btn shop-btn mt-3">READ MORE</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section class="py-5" id="blogs">
+  <div class="container">
+    <div class="section-title">
+      <h2>Latest From Blog</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Images/flora3.png" class="card-img-top" alt="Typography Blog">
+          <div class="card-body px-0">
+            <h5 class="card-title">Cultural Blend in Typography</h5>
+            <p class="card-text">How the fusion of Devanagari and Latin letters in branding can express deeper meaning in fashion identity.</p>
+            <a href="#" class="text-dark fw-bold">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Images/tanmay1.png" class="card-img-top" alt="Symbolism Blog">
+          <div class="card-body px-0">
+            <h5 class="card-title">Symbolism in Modern Attire</h5>
+            <p class="card-text">Exploring the visual impact and meaning behind integrating cultural scripts in apparel design.</p>
+            <a href="#" class="text-dark fw-bold">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Images/tradoboy1.png" class="card-img-top" alt="KRISYUG Identity Blog">
+          <div class="card-body px-0">
+            <h5 class="card-title">KRISYUG's Identity</h5>
+            <p class="card-text">Breakdown of the creative decision to incorporate native script in global fashion branding.</p>
+            <a href="#" class="text-dark fw-bold">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter-section">
+    <div class="container text-center">
+        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
+        <p class="mb-4">Get updates on new collections and special offers</p>
+        <div class="newsletter-input input-group">
+            <input type="email" class="form-control" placeholder="Your email address">
+            <button class="btn" type="button">SUBSCRIBE</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h3 class="footer-title">KRISYUG</h3>
+                <p>KRISYUG is a fusion of culture and fashion, blending Eastern heritage with global appeal. The iconic use of the Devanagari 'स' within our name reflects our roots and vision.</p>
+                <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h3 class="footer-title">Shop</h3>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h3 class="footer-title">Help</h3>
+                <ul class="footer-links list-unstyled">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h3 class="footer-title">Contact Info</h3>
+                <ul class="footer-links list-unstyled">
+                    <li><i class="fas fa-map-marker-alt me-2"></i> INDIA </li>
+                    <li><i class="fas fa-envelope me-2"></i> yugbrothers@krisyug.com</li>
+                    <li><i class="fas fa-phone-alt me-2"></i> 9121315323 </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
   
 </body>

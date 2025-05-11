@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KRISYUG - Timeless Ethnic Fashion</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Dancing+Script&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+  <style>
+ @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Dancing+Script:wght@500&family=Josefin+Sans:wght@400;600&display=swap');
+
+/* ===========================
+   Global Reset & Base Styles
+   =========================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #000;
+}
+
+/* =================
+   Header & Branding
+   ================= */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5em;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.logo .devanagari {
+  font-family: 'Dancing Script', cursive;
+  color: gold;
+}
+
+/* ==========
+   Navigation
+   ========== */
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ffd700;
+}
+
+/* ===============
+   Hero Section
+   =============== */
+.hero {
+  background: url('/images/brother1.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.hero-content h1,
+.hero-content p {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  font-weight: 400;
+}
+
+/* ===============
+   Primary Button
+   =============== */
+.btn-primary {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: transparent;
+  color: #fff;
+  padding: 12px 28px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ===============
+   Responsive Layout
+   =============== */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Fullscreen overlay nav  for sidebar */
+
+
+
+.overlay-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.97);
+  overflow-x: hidden;
+  transition: 0.6s ease;
+}
+
+.overlay-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.overlay-content a {
+  padding: 16px;
+  text-decoration: none;
+  font-size: 2rem;
+  display: block;
+  color: white;
+  transition: 0.3s;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.overlay-content a:hover {
+  color: gold;
+}
+
+.close-overlay {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+    /* MEN SECTION STYLES */
+    .men-section {
+      background-color: #f8f8f8;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .men-heading h2 {
+      font-size: 2.5em;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 10px;
+    }
+
+    .men-heading p {
+      font-size: 1.2em;
+      color: #666;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .men-slider {
+      display: flex;
+      flex-direction: row-reverse; /* right to left */
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .men-item {
+      flex: 0 0 auto;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .men-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .men-item:hover {
+      transform: scale(1.05);
+    }
+    .men-hero {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.men-slider-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.men-slide {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.men-slide:nth-child(1) {
+  background-image: url('/images/brother1.png'); /* Replace with your images */
+}
+.men-slide:nth-child(2) {
+  background-image: url('/images/tradoboy2.png');
+}
+.men-slide:nth-child(3) {
+  background-image: url('/images/crazy13.png');
+}
+
+.men-slide:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.btn-showcase {
+  font-family: 'Cormorant Garamond', serif;
+  display: inline-block;
+  padding: 10px 24px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-showcase:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+/* Default desktop background */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('images/curated1.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Mobile versio */
+@media (max-width: 768px) {
+  body {
+    background: url('images/curatedmobile1.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Dancing+Script:wght@500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #111;
+  color: white;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1100;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  padding: 20px 30px;
+  z-index: 1101;
+  position: relative;
+}
+
+.logo .devanagari {
+  font-family: 'Dancing Script', cursive;
+  color: gold;
+}
+
+.sidebar-alt {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow-x: hidden;
+  transition: width 0.5s ease;
+  z-index: 1000;
+  padding-top: 60px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar-alt.open {
+  width: 280px;
+}
+
+.closebtn-alt {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.sidebar-nav-alt {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 30px;
+}
+
+.sidebar-nav-alt a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 400;
+}
+
+.sidebar-nav-alt a:hover {
+  color: gold;
+  font-weight: 600;
+}
+
+
+
+.new-launches-section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+
+.new-launches-heading h2 {
+  font-size: 2.5em;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 10px;
+  color: #b8860b;
+}
+
+.new-launches-heading p {
+  font-size: 1.2em;
+  color: #ddd;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 40px;
+}
+
+.new-launches-slider {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.launch-item {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.launch-item:hover {
+  transform: translateY(-10px);
+}
+
+.launch-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; /* ensures images don’t stretch weirdly */
+  max-height: 280px; /* optional cap to avoid overly tall images */
+}
+
+
+.btn-primary {
+  margin-top: 15px;
+  display: inline-block;
+  border: 2px solid #b8860b;
+  background: transparent;
+  color: #b8860b;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #b8860b;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .new-launches-section {
+    height: auto;
+    padding: 60px 10px;
+    background-attachment: scroll; /* disables fixed background on mobile for performance */
+  }
+
+  .launch-item {
+    max-width: 90vw;
+    padding: 15px;
+  }
+
+  .launch-item img {
+    max-height: 220px; /* reduce height on mobile */
+  }
+}
+
+
+/* Launch section with double class Desktop background for Festive Favourites */
+.festive-bg {
+  background-image: url('/images/curated1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem; /* Optional: Adjust spacing */
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .festive-bg {
+    background-image: url('/images/curatedmobile1.png');
+  }
+}
+
+
+
+
+/* Double class with launch css Desktop background for New Product Launches */
+.launches-bg {
+  background-image: url('/images/curated1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+}
+
+/* Mobile background override */
+@media (max-width: 768px) {
+  .launches-bg {
+    background-image: url('/images/curatedmobile1.png');
+  }
+}
+
+
+/* Responsive background for Best Sellers section */
+.best-sellers-bg {
+  background-image: url('/images/curated1.jpg'); /* Desktop image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .best-sellers-bg {
+    background-image: url('/images/curatedmobile1.jpg');
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Featured Collection Section */
+.featured-collection {
+  position: relative;
+  height: 100vh;
+  background: url('/images/flora11.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.featured-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-content {
+  text-align: center;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-content .section-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.featured-content .section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.tshirt-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tshirt-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tshirt-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.tshirt-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.tshirt-card h3 {
+  color: #111;
+  margin: 15px 0 5px;
+}
+
+.tshirt-card p {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.btn-shop {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-shop:hover {
+  background: #333;
+}
+
+/* Curated Section */
+.curated-section {
+  background: linear-gradient(to right, #fffdf5, #f9f0e6);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.curated-heading h2 {
+  font-size: 2.8em;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 10px;
+  color: #4b2e2e;
+}
+
+.curated-heading p {
+  font-size: 1.2em;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #6b4b3e;
+  margin-bottom: 50px;
+}
+
+.curated-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.curated-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.curated-card:hover {
+  transform: translateY(-10px);
+}
+
+.curated-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.card-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4b2e2e;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-secondary:hover {
+  background-color: #6d3f3f;
+}
+
+/* Desktop background for curated section */
+.curated-section {
+  background-image: url('/images/curated1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Mobile background override */
+@media (max-width: 768px) {
+  .curated-section {
+    background-image: url('/images/curatedmobile1.png');
+  }
+}
+
+/* Desktop background */
+.curated-bg {
+  background-image: url('/images/curated1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .curated-bg {
+    background-image: url('/images/curatedmobile1.png');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* TSHIRT section*/
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('images/curated1.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.tshirt-container {
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  background: url('images/curated1.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+.tshirt-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.3);
+
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.tshirt-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  text-align: center;
+  color: #f0c040;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.product {
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 20px;
+  color: #fff;
+}
+
+.info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.info p {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.info button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f0c040;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info button:hover {
+  background-color: #d9a620;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background: none; /* Remove desktop background */
+  }
+
+  .section-container {
+    background: url('images/curatedmobile1.png') no-repeat center top scroll;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    color: white;
+  }
+
+  .section-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Optional overlay */
+    z-index: -1;
+  }
+}
+
+
+/* Signature Edit Section */
+.signature-edit-section {
+  padding: 60px 20px;
+  background: transparent;
+  text-align: center;
+}
+
+.signature-heading h2 {
+  font-family: 'Josefin Sans', serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.signature-heading p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.signature-grid.swiper {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.signature-grid .swiper-wrapper {
+  display: flex;
+}
+
+.signature-grid .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.signature-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.signature-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.signature-card:hover .signature-img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.signature-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  color: #fff;
+}
+
+.overlay-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: 'Josefin Sans', serif;
+}
+
+.overlay-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.explore-btn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .signature-heading h2 {
+    font-size: 2rem;
+  }
+
+  .signature-heading p {
+    font-size: 1rem;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .overlay-content p {
+    font-size: 0.9rem;
+  }
+
+  .explore-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .signature-img {
+    height: 280px;
+    object-fit: cover;
+  }
+}
+
+/* Desktop image height */
+@media (min-width: 769px) {
+  .signature-img {
+    height: 480px;
+    object-fit: cover;
+  }
+}
+
+
+
+
+.luxury-edit-section {
+  padding: 80px 20px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.luxury-edit-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.luxury-edit-heading h2 {
+  font-size: 3em;
+  font-family: 'Cormorant Garamond', serif;
+  color: #b8860b;
+  margin-bottom: 10px;
+}
+
+.luxury-edit-heading p {
+  font-size: 1.3em;
+  color: #f0f0f0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.luxury-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.luxury-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.luxury-card {
+  position: relative;
+  min-width: 300px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.luxury-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.card-overlay h3 {
+  font-size: 1.5em;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.card-overlay p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.btn-discover {
+  display: inline-block;
+  padding: 10px 25px;
+  background: transparent;
+  border: 2px solid #b8860b;
+  color: #b8860b;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-discover:hover {
+  background: #b8860b;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .luxury-edit-heading h2 {
+    font-size: 2em;
+  }
+
+  .luxury-edit-heading p {
+    font-size: 1em;
+  }
+
+  .luxury-card {
+    max-width: 85vw;
+  }
+
+  .luxury-card img {
+    max-height: 240px;
+  }
+
+  .card-overlay h3 {
+    font-size: 1.2em;
+  }
+
+  .card-overlay p {
+    font-size: 0.9em;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Timeless Ethnic Wear</h1>
+    <p>Experience elegance with every thread</p>
+    <a href="#men" class="btn-primary">Shop Now</a>
+  </div>
+
+
+</section>
+
+<!-- Header -->
+<header class="header">
+  <div class="logo" id="logo-trigger">
+    KRI<span class="devanagari">स</span>YUG
+  </div>
+
+  <nav class="nav">
+    <!-- Main Sections -->
+    <a href="#home">Home</a>
+    <a href="#men">Men</a>
+    <a href="#about">About</a>
+    <a href="/collections.html">Collections</a>
+    <a href="#testimonials">Testimonials</a>
+
+    <!-- Additional Pages -->
+    <a href="/people.html">People</a>
+    <a href="/work.html">Work</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/careers.html">Careers</a>
+
+    <!-- User Actions -->
+    <a href="#contact">Contact</a>
+    <a href="/signin.html">Sign In</a>
+    <a href="/cart.html"><i class="fas fa-shopping-cart"></i></a>
+  </nav>
+</header>
+
+
+
+
+<!-- Full-screen Overlay Menu -->
+<div id="overlay-menu" class="overlay-menu">
+  <a href="javascript:void(0)" class="close-overlay" id="close-overlay">&times;</a>
+  <div class="overlay-content">
+    <a href="/">Home</a>
+    <a href="/mens.html">Men</a>
+    <a href="/women.html">Women</a>
+    <a href="/collections.html">Collections</a>
+    <a href="/people.html">People</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/careers.html">Careers</a>
+    <a href="/work.html">Work</a>
+    <a href="/signin.html">Sign In</a>
+    <a href="/cart.html">Cart</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const backgroundConfig = [
+      {
+        selector: ".hero",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" },
+          { desktop: "/images/flora5.png", mobile: "/images/floramobile5.png" },
+          { desktop: "/images/flora3.png", mobile: "/images/curated2.png" }
+        ]
+      },
+      {
+        selector: ".tshirt-container",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      {
+        selector: ".new-launches-section",
+        images: [
+          { desktop: "/images/flora5.png", mobile: "/images/curated8.png" }
+        ]
+      },
+      {
+        selector: ".curated-section",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curated8.png" }
+        ]
+      },
+      {
+        selector: ".best-sellers",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curatedmobile1.png" }
+        ]
+      },
+      {
+        selector: ".new-launches-section.festive-bg",
+        images: [
+          { desktop: "/images/flora5.png", mobile: "/images/curated8.png" }
+        ]
+      },
+      {
+        selector: ".new-launches-section.best-sellers-bg",
+        images: [
+          { desktop: "/images/flora5.png", mobile: "/images/curated8.png" }
+        ]
+      },
+      {
+        selector: ".curated-section.curated-bg",
+        images: [
+          { desktop: "/images/curated1.png", mobile: "/images/curated8.png" }
+        ]
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function updateAllBackgrounds() {
+      const isMobile = window.innerWidth <= 768;
+
+      backgroundConfig.forEach(section => {
+        const element = document.querySelector(section.selector);
+        if (!element) return;
+
+        const image = section.images[currentIndex % section.images.length];
+        const imageUrl = isMobile ? image.mobile : image.desktop;
+
+        element.style.backgroundImage = `url(${imageUrl})`;
+        element.style.backgroundSize = "cover";
+        element.style.backgroundRepeat = "no-repeat";
+        element.style.backgroundPosition = "center";
+        element.style.backgroundAttachment = isMobile ? "scroll" : "fixed";
+      });
+    }
+
+    // Run once initially and then every 7 seconds
+    updateAllBackgrounds();
+    setInterval(() => {
+      currentIndex++;
+      updateAllBackgrounds();
+    }, 7000);
+
+    // Re-run on window resize
+    window.addEventListener("resize", updateAllBackgrounds);
+
+    // Auto-scroll luxury carousel (if it exists)
+    const carousel = document.getElementById("luxury-carousel");
+    if (carousel) {
+      setInterval(() => {
+        const scrollAmount = 330;
+        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+          carousel.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      }, 2000);
+    }
+
+    // Initialize Swiper on mobile only
+    if (window.innerWidth <= 768) {
+      const signatureGrid = document.querySelector(".signature-grid");
+      if (signatureGrid) {
+        new Swiper(".signature-grid", {
+          slidesPerView: 1.1,
+          spaceBetween: 20,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      }
+    }
+
+    // AOS animation
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  });
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+ 
+  
+  
+
+
+
+<script>
+  const logo = document.getElementById('logo-trigger');
+  const overlay = document.getElementById('overlay-menu');
+  const closeBtn = document.getElementById('close-overlay');
+
+  logo.addEventListener('click', () => {
+    overlay.style.width = "100%";
+  });
+
+  closeBtn.addEventListener('click', () => {
+    overlay.style.width = "0";
+  });
+</script>
+
+  
+  
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("luxury-carousel");
+
+    setInterval(() => {
+      if (!carousel) return;
+      const scrollAmount = 330; // match card width + gap
+      if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+        carousel.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }, 2000);
+  });
+</script>
+
+  
+
+ <!-- Luxury Edit Section -->
+ <section class="luxury-edit-section">
+  <div class="luxury-edit-heading" data-aos="fade-up">
+    <h2>Luxury Edit</h2>
+    <p>Elevate your wardrobe with timeless elegance</p>
+  </div>
+
+  <div class="luxury-carousel" id="luxury-carousel">
+    <div class="luxury-card" data-aos="fade-right">
+      <img src="/images/flora5.png" alt="Elegant Lehenga" />
+      <div class="card-overlay">
+        <h3>Elegant Lehenga</h3>
+        <p>Grace and grandeur woven together</p>
+        <a href="/luxury.html" class="btn-discover">Explore</a>
+      </div>
+    </div>
+
+    <div class="luxury-card" data-aos="fade-right" data-aos-delay="100">
+      <img src="/images/flora3.png" alt="Silk Saree" />
+      <div class="card-overlay">
+        <h3>Silk Saree</h3>
+        <p>Traditional craftsmanship meets modern style</p>
+        <a href="/luxury.html" class="btn-discover">Explore</a>
+      </div>
+    </div>
+
+    <div class="luxury-card" data-aos="fade-right" data-aos-delay="200">
+      <img src="/images/curated2.png" alt="Festive Kurti" />
+      <div class="card-overlay">
+        <h3>Festive Kurti</h3>
+        <p>Celebrate in color and comfort</p>
+        <a href="/luxury.html" class="btn-discover">Explore</a>
+      </div>
+    </div>
+
+    <div class="luxury-card" data-aos="fade-right" data-aos-delay="300">
+      <img src="/images/flora4.png" alt="Modern Anarkali" />
+      <div class="card-overlay">
+        <h3>Modern Anarkali</h3>
+        <p>A statement for every occasion</p>
+        <a href="/luxury.html" class="btn-discover">Explore</a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Curated Collection Section -->
+  <section class="curated-section">
+    <div class="curated-heading">
+      <h2>Curated Collection</h2>
+      <p>Handpicked styles just for you</p>
+    </div>
+  
+    <div class="curated-grid">
+      <div class="curated-card">
+        <img src="/images/flora12.png" alt="Curated Look 1">
+        <div class="card-info">
+          <h3>Elegant Kurti</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/tanmay1.png" alt="Curated Look 2">
+        <div class="card-info">
+          <h3>Bold Festive Wear</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/curated1.png" alt="Curated Look 3">
+        <div class="card-info">
+          <h3>Modern Saree</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- New Launches Section -->
+<section class="new-launches-section">
+  <div class="new-launches-heading">
+    <h2>New Launches</h2>
+    <p>Explore our latest ethnic wear crafted for elegance and grace.</p>
+  </div>
+
+  <div class="new-launches-slider">
+    <div class="launch-item">
+      <img src="/images/flora5.png" alt="New Product 1" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora2.png" alt="New Product 2" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora3.png" alt="New Product 3" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <div class="launch-item">
+      <img src="/images/flora4.png" alt="New Product 4" />
+      <a href="/newlaunch.html" class="btn-primary">Shop Now</a>
+
+    </div>
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+
+<div class="new-launches-section launches-bg">
+    <div class="new-launches-heading">
+      <h2>New Product Launches</h2>
+      <p>Discover the latest arrivals handpicked for you</p>
+    </div>
+    <div class="new-launches-slider">
+      <div class="launch-item">
+        <img src="images/product1.jpg" alt="New Product 1" />
+        <button class="btn-primary">View Product</button>
+      </div>
+      <div class="launch-item">
+        <img src="images/product2.jpg" alt="New Product 2" />
+        <button class="btn-primary">View Product</button>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </div>
+  
+  
+  <section class="new-launches-section best-sellers-bg">
+  <div class="new-launches-heading">
+    <h2>Best Sellers</h2>
+    <p>Most loved pieces from our customers</p>
+  </div>
+
+  <div class="new-launches-slider">
+    <div class="launch-item">
+      <img src="/images/curated1.png" alt="Best Seller 1">
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/best2.png" alt="Best Seller 2">
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/best3.png" alt="Best Seller 3">
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="new-launches-section festive-bg">
+  <div class="new-launches-heading">
+    <h2>Festive Favourites</h2>
+    <p>Celebrate in style with our top picks for the festive season.</p>
+  </div>
+
+  <div class="new-launches-slider">
+    <div class="launch-item">
+      <img src="/images/flora12.png" alt="Festive Product 1" />
+      <a href="/festive.html" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/tanmay1.png" alt="Festive Product 2" />
+      <a href="/festive.html" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/tanmay2.png" alt="Festive Product 3" />
+      <a href="/festive.html" class="btn-primary">Shop Now</a>
+    </div>
+    <div class="launch-item">
+      <img src="/images/tanmay3.png" alt="Festive Product 4" />
+      <a href="/festive.html" class="btn-primary">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="curated-section curated-bg">
+    <div class="curated-heading">
+      <h2>Curated Collection</h2>
+      <p>Handpicked styles just for you</p>
+    </div>
+  
+    <div class="curated-grid">
+      <div class="curated-card">
+        <img src="/images/flora12.png" alt="Curated Look 1">
+        <div class="card-info">
+          <h3>Elegant Kurti</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/tanmay1.png" alt="Curated Look 2">
+        <div class="card-info">
+          <h3>Bold Festive Wear</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+      <div class="curated-card">
+        <img src="/images/curated1.png" alt="Curated Look 3">
+        <div class="card-info">
+          <h3>Modern Saree</h3>
+          <a href="/curated.html" class="btn-secondary">View More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Signature Edit Section -->
+<section class="signature-edit-section" data-aos="fade-up">
+  <div class="signature-heading">
+    <h2>Signature Edit</h2>
+    <p>Crafted styles that define elegance</p>
+  </div>
+
+  <div class="swiper signature-grid">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="signature-card" data-aos="zoom-in">
+          <img src="/images/flora12.png" alt="Elegant Kurti" class="signature-img" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>Elegant Kurti</h3>
+              <p>Graceful embroidery with modern flair</p>
+              <a href="/curated.html" class="explore-btn">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="signature-card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="/images/tanmay1.png" alt="Bold Festive Wear" class="signature-img" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>Bold Festive Wear</h3>
+              <p>Make a statement this season</p>
+              <a href="/curated.html" class="explore-btn">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="signature-card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="/images/curated1.png" alt="Modern Saree" class="signature-img" />
+          <div class="overlay">
+            <div class="overlay-content">
+              <h3>Modern Saree</h3>
+              <p>Tradition meets trend</p>
+              <a href="/curated.html" class="explore-btn">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination for mobile carousel -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+  
+  
+
+  
+
+  
+  
+ 
+
+  
+  
+  
+
+
+
+
+ <!-- TSHIRT section -->
+  <section class="tshirt-section">
+    <div class="tshirt-container">
+      <h1>T-Shirt Spotlight</h1>
+      <div class="grid">
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="images/boss1.png" alt="T-shirt Image">
+          <div class="info">
+            <h3>Boss Premium Tee</h3>
+            <p><strong>Description:</strong> Crafted with ultra-soft cotton and a premium fit, the Boss Tee blends bold fashion with everyday comfort. A perfect mix of elegance and streetwear influence.</p>
+            <p><strong>Tradition & Culture:</strong> Inspired by classic Indian block prints, this piece carries forward the essence of heritage design with a modern twist.</p>
+            <button onclick="location.href='product-details/boss-premium.html'">Discover</button>
+          </div>
+        </div>
+  
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="images/flora2.png" alt="T-shirt Image">
+          <div class="info">
+            <h3>Floral Breeze Tee</h3>
+            <p><strong>Description:</strong> Designed with lightweight fabric and delicate floral prints, this tee is perfect for warm days and timeless looks.</p>
+            <p><strong>Tradition & Culture:</strong> A tribute to natural beauty, echoing the calm elegance of Indian botanical art.</p>
+            <button onclick="location.href='product-details/floral-breeze.html'">Discover</button>
+          </div>
+        </div>
+  
+        <!-- Add more products as needed -->
+      </div>
+    </div>
+  </section>
+  
+
+
+  
+
+   
+
+ 
+  
+
+ 
+  
+
+
+
+
+<!-- Auto-scroll script for new launches
+  <script>
+  const launchSlider = document.querySelector('.new-launches-slider');
+  let scrollLeft = 0;
+  setInterval(() => {
+    scrollLeft += 1;
+    launchSlider.scrollTo({
+      left: scrollLeft,
+      behavior: 'smooth'
+    });
+    if (scrollLeft >= launchSlider.scrollWidth - launchSlider.clientWidth) {
+      scrollLeft = 0;
+    }
+  }, 50);
+</script>
+-->
+  
+  
+
+  
+</body>
+</html>
