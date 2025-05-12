@@ -1319,10 +1319,7 @@ body {
 }
 
 
-/* FONT IMPORT */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Dancing+Script:wght@600&family=Josefin+Sans:wght@400;600&display=swap');
-
-/* RESET */
+/* RESET NEW ARRIVALS */
 * {
   margin: 0;
   padding: 0;
@@ -1366,6 +1363,7 @@ img {
   display: block;
   margin: 10px auto 0;
 }
+
 
 /* PRODUCT CARD */
 .product-card {
@@ -1784,6 +1782,557 @@ img {
 }
 
 
+
+
+/* Featured Arrivals Section ne design for arrivals  */
+.featured-arrivals-section {
+  background: #fff;
+}
+
+.featured-arrival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.featured-arrival-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.featured-img-wrap {
+  position: relative;
+  height: 100%;
+}
+
+.featured-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.featured-arrival-card:hover img {
+  transform: scale(1.05);
+}
+
+.featured-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.55);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: background 0.3s ease;
+}
+
+.featured-overlay h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.featured-overlay p {
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.product-badge {
+  background: #b8860b;
+  color: #fff;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* Styled Banner Section */
+.styled-collection-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.styled-collection-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+.banner-text-block {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 20px;
+}
+
+.banner-text-block p {
+  font-size: 1.1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+.shop-btn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Responsive Tweak */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 1.8rem;
+  }
+
+  .banner-text-block p {
+    font-size: 0.95rem;
+  }
+
+  .featured-overlay {
+    padding: 15px;
+  }
+}
+
+
+
+/* Rotating Showcase Styles */
+.rotating-showcase {
+  position: relative;
+  max-width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.rotating-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 0;
+}
+
+.rotating-card.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.rotating-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.rotating-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rotating-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.btn-discover {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-discover:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+#rotating-heritage {
+  background-color: #fdfcfa;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heritage-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.heritage-slide {
+  display: none;
+  transition: opacity 0.8s ease;
+}
+
+.heritage-slide.active {
+  display: block;
+}
+
+.heritage-img {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.heritage-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.heritage-slide:hover img {
+  transform: scale(1.03);
+}
+
+/* Overlay Text */
+.heritage-overlay {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  color: white;
+  max-width: 550px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px 30px;
+  border-radius: 10px;
+}
+
+.heritage-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.heritage-description {
+  font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.heritage-discover-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.heritage-discover-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heritage-overlay {
+    top: 15%;
+    left: 5%;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .heritage-title {
+    font-size: 1.5rem;
+  }
+
+  .heritage-description {
+    font-size: 0.9rem;
+  }
+
+  .heritage-discover-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* === Vertical Indian Heritage Product Rotator (Updated: Full-View Product Details) === */
+.vertical-heritage-section {
+  height: 100vh;
+  position: relative;
+  background-color: #fdfcfa;
+  overflow: hidden;
+}
+
+.vertical-heritage-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.vertical-heritage-card {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.vertical-heritage-card.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.vertical-heritage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+/* Text overlay styling */
+.vertical-heritage-info {
+  position: absolute;
+  top: 12%;
+  left: 8%;
+  max-width: 650px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  animation: fadeInText 1s ease forwards;
+}
+
+.vertical-heritage-info h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.vertical-heritage-info p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.vertical-discover-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: 'Cormorant Garamond', serif;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.vertical-discover-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .vertical-heritage-info {
+    top: 8%;
+    left: 5%;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .vertical-heritage-info h2 {
+    font-size: 2rem;
+  }
+
+  .vertical-heritage-info p {
+    font-size: 0.95rem;
+  }
+
+  .vertical-discover-btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+/* NEW1 */
+/* === Rotating Indian Heritage Section Styles (Unchanged Content, Full-Screen Vertical Display) === */
+/* === Vertical Indian Heritage Rotator Styles === */
+/* === Rotating Heritage Product Section === */
+.vertical-heritage-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.vertical-heritage-card {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.vertical-heritage-card.heritage-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.vertical-heritage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+/* Overlay Text Styling */
+.heritage-info {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  max-width: 600px;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  animation: fadeInText 1s ease forwards;
+}
+
+.heritage-info h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.heritage-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.btn-heritage-discover {
+  display: inline-block;
+  padding: 10px 26px;
+  font-family: 'Cormorant Garamond', serif;
+  border: 2px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-heritage-discover:hover {
+  background: white;
+  color: black;
+}
+
+/* Fade Animation */
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heritage-info {
+    top: 10%;
+    left: 6%;
+    max-width: 90%;
+  }
+
+  .heritage-info h2 {
+    font-size: 2rem;
+  }
+
+  .heritage-info p {
+    font-size: 0.95rem;
+  }
+
+  .btn-heritage-discover {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -1859,7 +2408,18 @@ img {
 
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.rotating-card');
+    let current = 0;
 
+    setInterval(() => {
+      cards[current].classList.remove('active');
+      current = (current + 1) % cards.length;
+      cards[current].classList.add('active');
+    }, 2000);
+  });
+</script>
 
   
   
@@ -1989,6 +2549,53 @@ img {
 
 
 
+ 
+    
+  
+
+  
+<script>
+  //=== Vertical Indian Heritage Product Rotator (Updated: Full-View Product Details)
+  document.addEventListener("DOMContentLoaded", function () {
+    const heritageCards = document.querySelectorAll(".vertical-heritage-card");
+    let currentIndex = 0;
+
+    function rotateHeritageCards() {
+      heritageCards.forEach((card, i) => {
+        card.classList.remove("heritage-active");
+      });
+
+      heritageCards[currentIndex].classList.add("heritage-active");
+      currentIndex = (currentIndex + 1) % heritageCards.length;
+    }
+
+    rotateHeritageCards(); // Initial load
+    setInterval(rotateHeritageCards, 5000); // Every 5 seconds
+  });
+</script>
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".heritage-slide");
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 2000);
+  });
+</script>
+
+
+
+
+
+
 
 
 
@@ -2034,6 +2641,98 @@ img {
     }, 2000);
   });
 </script>
+
+
+<!-- Rotating Indian Heritage Product Showcase 
+//=== Vertical Indian Heritage Product Rotator (Updated: Full-View Product Details) -->
+<!-- Rotating Indian Heritage Product Showcase -->
+<section class="rotating-heritage-section" id="rotating-heritage">
+  <div class="container">
+    <div class="section-title">
+      <h2>Celebrating Timeless Indian Textiles</h2>
+    </div>
+
+    <div class="vertical-heritage-container">
+      <!-- Product 1 -->
+      <div class="vertical-heritage-card heritage-active">
+        <img src="Images/curated2.png" alt="Banarasi Silk Lehenga">
+        <div class="heritage-info">
+          <h2>Banarasi Silk Lehenga</h2>
+          <p>
+            Handwoven in the ancient lanes of Varanasi, this lehenga is an ode to the grandeur of Mughal artistry.
+            Crafted from the finest silk with intricate gold and silver zari brocade, it symbolizes the pinnacle of bridal
+            opulence. The weaving technique, passed down for over 500 years, reflects timeless royal fashion. A favorite
+            among queens and modern brides alike, Banarasi lehengas represent the elegance of Indian weddings across
+            generations.
+          </p>
+          <a href="/banarasi.html" class="btn-heritage-discover">Discover</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="vertical-heritage-card">
+        <img src="Images/curated8.png" alt="Chikankari Lucknow Kurta">
+        <div class="heritage-info">
+          <h2>Chikankari Lucknow Kurta</h2>
+          <p>
+            Rooted in the Nawabi culture of Lucknow, Chikankari is one of India's most revered embroidery styles.
+            Every motif on this cotton kurta is delicately hand-stitched using white thread over pastel tones — perfect
+            for the summer air. Artisans, primarily women, keep this 18th-century craft alive with patience and grace.
+            Each piece is not just a garment but a poetic expression of feminine artistry, comfort, and sophistication.
+          </p>
+          <a href="/chikankari.html" class="btn-heritage-discover">Discover</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="vertical-heritage-card">
+        <img src="Images/curated7.png" alt="Ajrakh Handblock Jacket">
+        <div class="heritage-info">
+          <h2>Ajrakh Handblock Jacket</h2>
+          <p>
+            With roots tracing back to Sindh and Kutch, the Ajrakh technique is over 4,000 years old. This jacket,
+            printed using natural dyes — indigo, madder, turmeric — undergoes 16 stages of intricate hand-block
+            printing. Featuring geometric symmetry and deep earthy hues, it carries a whisper of the desert winds,
+            camels, and nomadic pride. It is more than apparel — it is living heritage printed on cotton.
+          </p>
+          <a href="/ajrakh.html" class="btn-heritage-discover">Discover</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="vertical-heritage-card">
+        <img src="Images/flora2.png" alt="Kalamkari Cotton Saree">
+        <div class="heritage-info">
+          <h2>Kalamkari Cotton Saree</h2>
+          <p>
+            This masterpiece from Andhra Pradesh is created using hand-drawn kalam (pen) motifs on eco-friendly fabric.
+            The natural dyeing technique involves 20+ steps of washing, boiling, and sun drying. Motifs often depict
+            epics from Ramayana and Mahabharata — connecting mythology with fashion. Soft on the skin yet rich in
+            narrative, it is a storytelling saree — woven with devotion and visual grace.
+          </p>
+          <a href="/kalamkari.html" class="btn-heritage-discover">Discover</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="vertical-heritage-card">
+        <img src="Images/curated2.png" alt="Phulkari Punjab Dupatta">
+        <div class="heritage-info">
+          <h2>Phulkari Punjab Dupatta</h2>
+          <p>
+            Originating from rural Punjab, Phulkari means "flower work" — an embroidery tradition practiced by women to
+            celebrate weddings and festivals. Bright silk threads stitched in geometric patterns over cotton base
+            reflect joy and community spirit. This dupatta is often passed as a family heirloom — a symbol of love,
+            protection, and feminine identity woven under starlit village verandas.
+          </p>
+          <a href="/phulkari.html" class="btn-heritage-discover">Discover</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -2097,6 +2796,230 @@ img {
         </div>
     </section>
 
+
+<!-- NEW1 -->
+<section class="vertical-product-heritage">
+  <div class="vertical-heritage-container">
+    <div class="vertical-heritage-card active">
+      <img src="/images/curated2.png" alt="Banarasi Lehenga">
+      <div class="heritage-info">
+        <h2>Banarasi Lehenga</h2>
+        <p>Woven with real zari in the looms of Varanasi, this lehenga features age-old motifs and rich brocade texture. Crafted from 100% silk, it's known for opulence and regal presence.</p>
+        <a href="/banarasi-lehenga.html" class="btn-heritage-discover">Discover</a>
+      </div>
+    </div>
+
+    <div class="vertical-heritage-card">
+      <img src="/images/curated7.png" alt="Chikankari Kurta">
+      <div class="heritage-info">
+        <h2>Chikankari Kurta</h2>
+        <p>Hand-embroidered by artisans in Lucknow, this cotton kurta showcases centuries-old craft of shadow work with modern finesse. Ideal for festive wear and summer elegance.</p>
+        <a href="/chikankari-kurta.html" class="btn-heritage-discover">Discover</a>
+      </div>
+    </div>
+
+    <div class="vertical-heritage-card">
+      <img src="/images/curated8.png" alt="Kanjeevaram Saree">
+      <div class="heritage-info">
+        <h2>Kanjeevaram Saree</h2>
+        <p>From the temples of Tamil Nadu, this saree is a symbol of heritage. Crafted in fine mulberry silk with contrast gold borders, it offers unmatched durability and luster.</p>
+        <a href="/kanjeevaram-saree.html" class="btn-heritage-discover">Discover</a>
+      </div>
+    </div>
+
+    <div class="vertical-heritage-card">
+      <img src="/images/curated7.png" alt="Ajrakh Kurta Set">
+      <div class="heritage-info">
+        <h2>Ajrakh Kurta Set</h2>
+        <p>Printed using natural dyes in Kutch, Gujarat, this cotton kurta set features symmetrical Ajrakh patterns made through 14-step hand-block process. Ethical and elegant.</p>
+        <a href="/ajrakh-kurta.html" class="btn-heritage-discover">Discover</a>
+      </div>
+    </div>
+
+    <div class="vertical-heritage-card">
+      <img src="/images/curated8.png" alt="Phulkari Dupatta">
+      <div class="heritage-info">
+        <h2>Phulkari Dupatta</h2>
+        <p>Bright threads, bold colors, and floral motifs — this dupatta brings Punjab’s festive soul alive. Crafted in georgette with intricate hand embroidery by rural women artisans.</p>
+        <a href="/phulkari-dupatta.html" class="btn-heritage-discover">Discover</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- NEW1 -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const heritageCards = document.querySelectorAll(".vertical-heritage-card");
+    let currentIndex = 0;
+
+    setInterval(() => {
+      heritageCards[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % heritageCards.length;
+      heritageCards[currentIndex].classList.add("active");
+    }, 2000);
+  });
+</script>
+
+
+
+    <!-- Featured Arrivals -->
+<section class="featured-arrivals-section py-5" id="new-arrivals">
+  <div class="container">
+    <div class="section-title">
+      <h2>New Arrivals</h2>
+    </div>
+    <div class="featured-arrival-grid">
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated2.png" alt="Gray Shirt">
+          <div class="featured-overlay">
+            <span class="product-badge">New</span>
+            <h4>Gray Shirt</h4>
+            <p>$945.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated7.png" alt="Women's Pants">
+          <div class="featured-overlay">
+            <span class="product-badge">Sale</span>
+            <h4>Women's Pants</h4>
+            <p>$925.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated8.png" alt="Polo Shirt">
+          <div class="featured-overlay">
+            <h4>Polo Shirt</h4>
+            <p>$935.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated11.png" alt="Girl's Shirt">
+          <div class="featured-overlay">
+            <span class="product-badge">Popular</span>
+            <h4>Girl's Shirt</h4>
+            <p>$1045.50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="rotating-heritage">
+  <div class="heritage-carousel">
+    <div class="heritage-slide active">
+      <div class="heritage-img">
+        <img src="Images/curated2.png" alt="Banarasi Lehenga">
+        <div class="heritage-overlay">
+          <h3 class="heritage-title">Banarasi Lehenga</h3>
+          <p class="heritage-description">Crafted in Varanasi, this lehenga showcases intricate gold zari work on pure silk. A symbol of royal weddings and timeless craftsmanship.</p>
+          <a href="/banarasi-lehenga.html" class="heritage-discover-btn">Discover</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="heritage-slide">
+      <div class="heritage-img">
+        <img src="Images/curated7.png" alt="Chikankari Kurta">
+        <div class="heritage-overlay">
+          <h3 class="heritage-title">Chikankari Kurta</h3>
+          <p class="heritage-description">Handcrafted in Lucknow with delicate thread work, this kurta brings elegance and lightness to everyday wear.</p>
+          <a href="/chikankari-kurta.html" class="heritage-discover-btn">Discover</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="heritage-slide">
+      <div class="heritage-img">
+        <img src="Images/curated8.png" alt="Phulkari Jacket">
+        <div class="heritage-overlay">
+          <h3 class="heritage-title">Phulkari Jacket</h3>
+          <p class="heritage-description">A vibrant explosion of floral embroidery on raw silk, rooted in Punjabi culture and celebration wear.</p>
+          <a href="/phulkari-jacket.html" class="heritage-discover-btn">Discover</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="heritage-slide">
+      <div class="heritage-img">
+        <img src="Images/curated2.png" alt="Ajrakh Dress">
+        <div class="heritage-overlay">
+          <h3 class="heritage-title">Ajrakh Dress</h3>
+          <p class="heritage-description">Sustainably dyed with indigo and madder, this cotton dress is hand-block printed with geometric Ajrakh patterns from Kutch.</p>
+          <a href="/ajrakh-dress.html" class="heritage-discover-btn">Discover</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Rotating Product Showcase Section -->
+<section class="rotating-showcase-section py-5" id="timed-products">
+  <div class="container">
+    <div class="section-title">
+      <h2>Discover Our Favorites</h2>
+    </div>
+    <div class="rotating-showcase">
+      <div class="rotating-card active">
+        <div class="rotating-img">
+          <img src="Images/curated2.png" alt="Kurta Look">
+          <div class="rotating-overlay">
+            <h3>Elegant Kurta</h3>
+            <p>$945.50</p>
+            <a href="#" class="btn-discover">Discover</a>
+          </div>
+        </div>
+      </div>
+      <div class="rotating-card">
+        <div class="rotating-img">
+          <img src="Images/curated7.png" alt="Festive Pants">
+          <div class="rotating-overlay">
+            <h3>Festive Pants</h3>
+            <p>$925.50</p>
+            <a href="#" class="btn-discover">Discover</a>
+          </div>
+        </div>
+      </div>
+      <div class="rotating-card">
+        <div class="rotating-img">
+          <img src="Images/curated8.png" alt="Polished Polo">
+          <div class="rotating-overlay">
+            <h3>Polished Polo</h3>
+            <p>$935.00</p>
+            <a href="#" class="btn-discover">Discover</a>
+          </div>
+        </div>
+      </div>
+      <div class="rotating-card">
+        <div class="rotating-img">
+          <img src="Images/curated11.png" alt="Graceful Blouse">
+          <div class="rotating-overlay">
+            <h3>Graceful Blouse</h3>
+            <p>$1045.50</p>
+            <a href="#" class="btn-discover">Discover</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     <!-- Collection Banner -->
     <section class="collection-banner" style="background-image: url('Images/mor.jpg');">
         <div class="container">
@@ -2107,6 +3030,69 @@ img {
             </div>
         </div>
     </section>
+
+
+    <!-- Featured Arrivals -->
+<section class="featured-arrivals-section py-5" id="new-arrivals">
+  <div class="container">
+    <div class="section-title">
+      <h2>New Arrivals</h2>
+    </div>
+    <div class="featured-arrival-grid">
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated2.png" alt="Gray Shirt">
+          <div class="featured-overlay">
+            <span class="product-badge">New</span>
+            <h4>Gray Shirt</h4>
+            <p>$945.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated7.png" alt="Women's Pants">
+          <div class="featured-overlay">
+            <span class="product-badge">Sale</span>
+            <h4>Women's Pants</h4>
+            <p>$925.50</p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated8.png" alt="Polo Shirt">
+          <div class="featured-overlay">
+            <h4>Polo Shirt</h4>
+            <p>$935.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="featured-arrival-card">
+        <div class="featured-img-wrap">
+          <img src="Images/curated11.png" alt="Girl's Shirt">
+          <div class="featured-overlay">
+            <span class="product-badge">Popular</span>
+            <h4>Girl's Shirt</h4>
+            <p>$1045.50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styled Collection Banner -->
+<section class="styled-collection-banner" style="background-image: url('Images/mor.jpg');">
+  <div class="container">
+    <div class="banner-text-block">
+      <h2 class="banner-title">Summer Essentials</h2>
+      <p>Our dresses are designed to make you feel confident and stylish. They feature classical detailing in a range of colors.</p>
+      <button class="btn shop-btn mt-3">VIEW COLLECTION</button>
+    </div>
+  </div>
+</section>
+
 
 
     <!-- New Launches Section -->
